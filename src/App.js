@@ -42,8 +42,36 @@ class App extends Component {
     )
   }
 
+  createUser=(user)=>{
+    fetch('http://localhost:3000/signup',{
+      method: 'POST',
+      headers:{
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },body:JSON.stringify({
+        user: {
+          name: user.name,
+          email: user.email,
+          password: user.password
+        }
+      })
+    })
+    .then(res=>res.json())
+    .then(data => {
+      if (data.status === 422) {
+        alert('Email already taken!')
+      }
+      else {
+        console.log('Response Data', data);
+        localStorage.setItem('project-user-token', data.token);
+        this.setState({ user: data.user });
+        this.props.history.push('/welcome');
+      }
+    })
+  }
+
   render(){
-    console.log('state',this.state);
+    // console.log('state',this.state);
     
     return (
     <div className="App" >
@@ -72,7 +100,7 @@ class App extends Component {
         <Route
           path='/main'
           render={() => (
-              <Main />
+              <Main userId={this.state.user.id}/>
           )}
         />
       </div>

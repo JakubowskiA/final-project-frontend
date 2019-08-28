@@ -10,34 +10,37 @@ import Entries from './Entries'
 
 class Main extends Component {
     render(){
-        console.log('user id', this.props.userId);
+        // console.log('user id', this.props.userId);
         return(
             <Fragment>
                 <Header />
                 <NavBar />
                 <Route
-                    path='/new-entry'
+                    path='/main/new-entry'
                     render={() => (
                         <EntryForm
+                        userId={this.props.userId}
                         />
                     )}
                 />
                 <Route
-                    path='/entries'
+                    path='/main/entries'
                     render={() => (
                         <Entries
+                        userId={this.props.userId}
                         />
                     )}
                 />
                 <Route
-                    path='/stress-level-tracker'
+                    path='/main/stress-level-tracker'
                     render={() => (
                         <StressLevelTracker
+                        userId={this.props.userId}
                         />
                     )}
                 />
                 {/* <Route
-                    path='/'
+                    path='/main/'
                     render={() => (
                         <Main />
                     )}

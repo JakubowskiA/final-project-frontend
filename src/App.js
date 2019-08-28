@@ -70,6 +70,29 @@ class App extends Component {
     })
   }
 
+  
+
+  componentDidMount() {
+    let token = localStorage.getItem('project-user-token');
+    if (token) {
+      fetch(`http://localhost:3000/retrieve_user`, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+          Accepts: 'application/json',
+          Authorization: `${token}`
+        }
+      })
+        .then(resp => resp.json())
+        .then(user => {
+          this.setState({ user: user });
+          this.props.history.push('/welcome');
+        });
+    } else {
+      this.props.history.push('/')
+    }
+  }
+
   render(){
     // console.log('state',this.state);
     
@@ -93,14 +116,14 @@ class App extends Component {
             <Fragment>
               <Header />
               {/* <NavBar /> */}
-              <Welcome userId={this.state.user.id} />
+              <Welcome userId={this.state.user.id}/>
             </Fragment>
           )}
         />
         <Route
           path='/main'
           render={() => (
-              <Main userId={this.state.user.id}/>
+              <Main userId={this.state.user.id} user={this.state.user}/>
           )}
         />
       </div>

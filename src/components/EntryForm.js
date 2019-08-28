@@ -25,15 +25,34 @@ class EntryForm extends Component{
         })
     }
 
-    submitEntry=(event)=>{
+    submitEntry=(event, entry)=>{
         event.preventDefault()
-        console.log(this.state)
-    }
+        console.log('entry',entry)
+        // fetch('http://localhost:3000/entries',{
+        //   method: 'POST',
+        //   headers:{
+        //     "Content-Type": "application/json",
+        //     "Accept": "application/json"
+        //   },body:JSON.stringify({
+        //     entry: {
+        //       name: user.name,
+        //       email: user.email,
+        //       password: user.password
+        //     }
+        //   })
+        // })
+        // .then(res=>res.json())
+        // .then(data => {
+        //     console.log('Response Data', data);
+        //     this.setState({ user: data.user });
+        //     this.props.history.push('/welcome');
+        // })
+      }
 
     render(){
     return(
         
-        <form onSubmit={this.submitEntry}>
+        <form onSubmit={(event)=>this.submitEntry(event, this.state)}>
         <br/>
             <input type="range" min="1" max="10" step="1" onChange={this.handleChange} name="preLevel"/>
             <br/><br/>
@@ -61,20 +80,20 @@ class EntryForm extends Component{
                 <div>
                     <label>What can you do to reduce your stress?</label>
                     <br/>
-                    <textarea/>
+                    <textarea name="evaluation" onChange={this.handleChange}/>
                 </div>
             </div>
             <div>
                 <label>What is making you feel stressed?</label>
                 <br/>
-                <textarea/>
+                <textarea name="action" onChange={this.handleChange}/>
             </div>
             <div>
                 <label>What is making you feel stressed?</label>
                 <br/>
-                <textarea/> 
+                <textarea name="positivity" onChange={this.handleChange}/> 
             </div> 
-            <div>
+            {/* <div>
                 <label>Updated Stress Level: </label>
                 <br/>
                 <button>1</button>
@@ -87,7 +106,11 @@ class EntryForm extends Component{
                 <button>8</button>
                 <button>9</button>
                 <button>10</button>
-            </div>
+            </div> */}
+            <input type="range" min="1" max="10" step="1" onChange={this.handleChange} name="postLevel"/>
+            <br/><br/>
+            <label>Updated Stress Level: {this.state.postLevel}</label>
+            <br/>
             <br/>
             <input type="Submit"/>
         </form>

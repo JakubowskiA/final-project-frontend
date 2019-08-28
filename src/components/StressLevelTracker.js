@@ -5,7 +5,10 @@ import React, {Component, Fragment} from 'react';
 class StressLevelTracker extends Component{
     render(){
     return(
-        <div>INSERT STRESS LEVELS</div> 
+        <Fragment>
+            <div>INSERT STRESS LEVELS</div> 
+            <canvas id="myChart"></canvas>
+        </Fragment>
     )}
 }
 

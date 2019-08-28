@@ -20,6 +20,7 @@ class Main extends Component {
                     render={() => (
                         <EntryForm
                         userId={this.props.userId}
+                        user={this.props.user}
                         />
                     )}
                 />
@@ -28,6 +29,7 @@ class Main extends Component {
                     render={() => (
                         <Entries
                         userId={this.props.userId}
+                        user={this.props.user}
                         />
                     )}
                 />
@@ -36,6 +38,7 @@ class Main extends Component {
                     render={() => (
                         <StressLevelTracker
                         userId={this.props.userId}
+                        user={this.props.user}
                         />
                     )}
                 />

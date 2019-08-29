@@ -48,3 +48,30 @@
   padding: 1em;
   background-color: #61dafb;
 }
+
+.calendar{
+  /* margin-left: 1%; */
+  min-width: 46vw;
+  min-height: 50vh;
+  background-color:rgb(0, 187, 255);
+  border-radius: 2%;
+  align-content: center;
+  color: black;
+  font-size: 36pt;
+}
+
+.DayPicker-Day {
+  display: table-cell;
+  padding: 0.5em;
+  border-radius: 50%;
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  font-size: 18pt;
+}
+
+.DayPicker-Day--today {
+  color: black !important;
+  font-weight: 700;
+  background-color: aliceblue;
+}

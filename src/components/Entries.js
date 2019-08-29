@@ -1,5 +1,12 @@
 import React, {Component, Fragment} from 'react';
 import { withRouter } from 'react-router-dom';
+// import Calendar from 'react-calendar';
+// import Calendar from 'react-calendar/dist/entry.nostyle';
+import ModernDatepicker from 'react-modern-datepicker';
+import DayPicker from 'react-day-picker';
+import 'react-day-picker/lib/style.css';
+
+
 import Entry from './Entry'
 
 class Entries extends Component{
@@ -12,12 +19,11 @@ class Entries extends Component{
         .then(res=>res.json())
         .then(data=>this.setState({userEntries:data}))
     }
-    // UPDATE NOTES
-    // entriesArray successfully gets entries data, now I need to figure out how to display it all
-    // Display in calendar??
-    // Have users enter a date to get entry?
 
-    // console.log('entries',this.props)
+    selectDay=(event)=>{
+        console.log(event);
+        
+    }
     
     render(){
         console.log('entry props',this.state.userEntries)
@@ -32,8 +38,19 @@ class Entries extends Component{
     return(
     <Fragment>
         <h1>TEST</h1>
-        {/* {entriesArray} */}
+        {/* <ModernDatepicker/> */}
+        <DayPicker 
+        className="calendar"
+        style="color:black !important"
+        />
+        {/* <Calendar 
+        calendarType="US" 
+        className="calendar" 
+        onClickDay={this.selectDay} 
         
+        tileClassName="tile"/> */}
+        {/* {entriesArray} */}
+        <br/>
        
     </Fragment>
     )}

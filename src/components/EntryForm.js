@@ -35,9 +35,13 @@ class EntryForm extends Component{
         //     "Accept": "application/json"
         //   },body:JSON.stringify({
         //     entry: {
-        //       name: user.name,
-        //       email: user.email,
-        //       password: user.password
+        //         preLevel: entry.preLevel,
+        //         stressors: entry.stressors,
+        //         evaluation: entry.evaluation,
+        //         action:  entry.action, 
+        //         positivity:  entry.positivity,
+        //         postLevel: entry.postLevel,
+        //         user_id:
         //     }
         //   })
         // })
@@ -50,6 +54,8 @@ class EntryForm extends Component{
       }
 
     render(){
+        console.log('OOOOZR', this.props);
+        
     return(
         
         <form onSubmit={(event)=>this.submitEntry(event, this.state)}>

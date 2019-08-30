@@ -17,7 +17,8 @@ class Entries extends Component{
         // console.log('entry',this.state.entry)
     return(
     <Fragment>
-        <h3>INSDATE</h3>
+        <h1>WORK PLZ</h1>
+        {/* <h3>INSDATE</h3>
         <h3>Initial Stress Level</h3>
         <br/>
         <h3></h3>
@@ -28,8 +29,8 @@ class Entries extends Component{
         <br/>
         <h3></h3>
         <br/>
-        <h3>Final Stress Level</h3>
-    </Fragment>
+        <h3>Final Stress Level</h3>*/}
+    </Fragment> 
     )}
 }
 

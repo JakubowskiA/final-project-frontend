@@ -14,7 +14,9 @@ class Entries extends Component{
         userEntries:[],
         // date:"",
         date: new Date(),
-        dateString:""
+        dateString:"",
+        prompt1:"Choose a date.",
+        prompt2:""
     }
 
     // componentDidMount(){
@@ -37,9 +39,10 @@ class Entries extends Component{
     // }
 
     onChange =(date)=> {
-        console.log(date);
+        // console.log(date);
         let dateString = String(date)
-        console.log('Date String', dateString);
+        this.setState({dateString})
+        // console.log('Date String', dateString);
         // this.setState({ dateString:dateString })
         // console.log('date state str',this.state.dateString);
         
@@ -48,6 +51,11 @@ class Entries extends Component{
         // //  SWITCH STATEMENT FOR MONTHS
         // let chosenDay=chosenDate.slice(8,10)
         // console.log(chosenDay, chosenYear)
+        // if (this.state.userEntries.length === 0){
+        //     this.setState({prompt2: "You have no entries for this day."}) 
+        // }else{
+        //     this.setState({prompt2: ""})
+        // }
         this.getEntry(dateString)
     }
     
@@ -66,6 +74,11 @@ class Entries extends Component{
             .then(resp => resp.json())
             .then(data => {
               this.setState({ userEntries: data });
+              if (this.state.userEntries.length === 0){
+                this.setState({prompt2: "You have no entries for this day."}) 
+            }else{
+                this.setState({prompt2: ""})
+            }
               console.log('entries',data);
               
             //   this.props.history.push('/welcome');
@@ -75,20 +88,24 @@ class Entries extends Component{
     
     
     render(){
-        console.log('user',this.props);
+        console.log('state entries',this.state);
+        let entriesArray = ["You have no entries for this day."]
+        if (this.state.userEntries !== []){
+        entriesArray = this.state.userEntries.map(
+            entry=>(
+                <Entry
+                key={entry.id}
+                entry={entry}
+                />
+            )
+        )}else{entriesArray = ["You have no entries for this day."]}
+
         
-        // console.log('entry props',this.state.userEntries)
-        // const entriesArray = this.state.userEntries.map(
-        //     entry=>(
-        //         <Entry
-        //         key={entry.id}
-        //         entry={entry}
-        //         />
-        //     )
-        // )
+
     return(
     <Fragment>
-        <h1>TEST</h1>
+
+        <h1>{this.state.prompt1}</h1>
        
         {/* CALENDAR1
         <div onClick={this.selectDay}>
@@ -109,7 +126,9 @@ class Entries extends Component{
         onChange={this.onChange}
         value={this.state.date}
         /> 
-         {/* {entriesArray} */}
+        <br/>
+        <h3>{this.state.prompt2}</h3>
+         {entriesArray}
         <br/>
        
     </Fragment>

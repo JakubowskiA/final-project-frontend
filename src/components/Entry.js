@@ -7,14 +7,14 @@ class Entries extends Component{
         entry:{}
     }
     
-    componentDidMount(){
-        fetch(`http://localhost:3000/users/${this.props.userId}/entries`)
-        .then(res=>res.json())
-        .then(data=>this.setState({entry:data}))
-    }
+    // componentDidMount(){
+    //     fetch(`http://localhost:3000/users/${this.props.userId}/entries`)
+    //     .then(res=>res.json())
+    //     .then(data=>this.setState({entry:data}))
+    // }
     
     render(){
-        console.log('entry',this.state.entry)
+        // console.log('entry',this.state.entry)
     return(
     <Fragment>
         <h3>INSDATE</h3>

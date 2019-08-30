@@ -110,3 +110,17 @@
   font-weight: 700;
   background-color: aliceblue;
 }
+
+.show-entry{
+  text-align: left;
+  margin: 15%;
+  border: #757575;
+  border-style: double;
+  padding: 5%;
+  border-radius: 2%
+}
+
+.input-textarea{
+  min-width: 50%;
+  min-height: 3.5em;
+}

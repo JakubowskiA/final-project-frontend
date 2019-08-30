@@ -54,9 +54,9 @@ class EntryForm extends Component{
         
         <form onSubmit={(event)=>this.submitEntry(event, this.state)}>
         <br/>
-            <input type="range" min="1" max="10" step="1" onChange={this.handleChange} name="preLevel"/>
-            <br/><br/>
             <label>Stress Level: {this.state.preLevel}</label>
+            <br/><br/>
+            <input type="range" min="1" max="10" step="1" onChange={this.handleChange} name="preLevel"/>
             <br/>
                 {/* <datalist id="tickmarks">
                     <option value="1" label="1">1</option>
@@ -75,23 +75,40 @@ class EntryForm extends Component{
                 <div>
                     <label htmlFor="stressors">What is making you feel stressed?</label>
                     <br/>
-                    <textarea id="stressors" name="stressors" onChange={this.handleChange}/>
+                    <textarea id="stressors" name="stressors" 
+                    onChange={this.handleChange}
+                    className="input-textarea"
+                    placeholder={"Write what is making you feel stressed. The more specific you are, the better you can plan how to handle what is causing your stress."}
+                    />
                 </div>
                 <div>
                     <label>What can you do to reduce your stress?</label>
                     <br/>
-                    <textarea name="evaluation" onChange={this.handleChange}/>
+                    <textarea name="evaluation" 
+                    onChange={this.handleChange}
+                    className="input-textarea"
+                    placeholder={"Think about what you can do to minimize or even remove the stressors in your life. These should be specific actions you can take."}
+                    />
                 </div>
             </div>
+            <p>Take a break for some self care. Do something just for you!</p>
             <div>
-                <label>What is making you feel stressed?</label>
+                <label>What did you do for your self care?</label>
                 <br/>
-                <textarea name="action" onChange={this.handleChange}/>
+                <textarea name="action" 
+                onChange={this.handleChange}
+                className="input-textarea"
+                placeholder={"Put the journal down and do something just for you. This is self care. When you are done, write what you did. This is a good way to keep track of your self care and hold yourself accountable for practicing self care."}
+                />
             </div>
             <div>
-                <label>What is making you feel stressed?</label>
+                <label>Write something that makes you happy!</label>
                 <br/>
-                <textarea name="positivity" onChange={this.handleChange}/> 
+                <textarea name="positivity" 
+                onChange={this.handleChange}
+                className="input-textarea"
+                placeholder={"Write something that makes you happy. This can be a good memory, something you are looking forward to, or something good that happened today."}
+                /> 
             </div> 
             {/* <div>
                 <label>Updated Stress Level: </label>
@@ -107,9 +124,9 @@ class EntryForm extends Component{
                 <button>9</button>
                 <button>10</button>
             </div> */}
-            <input type="range" min="1" max="10" step="1" onChange={this.handleChange} name="postLevel"/>
-            <br/><br/>
             <label>Updated Stress Level: {this.state.postLevel}</label>
+            <br/><br/>
+            <input type="range" min="1" max="10" step="1" onChange={this.handleChange} name="postLevel"/>
             <br/>
             <br/>
             <input type="Submit"/>

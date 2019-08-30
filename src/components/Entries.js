@@ -1,8 +1,8 @@
 import React, {Component, Fragment} from 'react';
-import { withRouter } from 'react-router-dom';
+import { Route, withRouter } from 'react-router-dom';
 import Calendar from 'react-calendar';
 // import Calendar from 'react-calendar/dist/entry.nostyle';
-import ModernDatepicker from 'react-modern-datepicker';
+// import ModernDatepicker from 'react-modern-datepicker';
 import DayPicker from 'react-day-picker';
 import 'react-day-picker/lib/style.css';
 
@@ -46,16 +46,6 @@ class Entries extends Component{
         // this.setState({ dateString:dateString })
         // console.log('date state str',this.state.dateString);
         
-        // let chosenYear=chosenDate.slice(11,15)
-        // let chosenMonth=null
-        // //  SWITCH STATEMENT FOR MONTHS
-        // let chosenDay=chosenDate.slice(8,10)
-        // console.log(chosenDay, chosenYear)
-        // if (this.state.userEntries.length === 0){
-        //     this.setState({prompt2: "You have no entries for this day."}) 
-        // }else{
-        //     this.setState({prompt2: ""})
-        // }
         this.getEntry(dateString)
     }
     
@@ -125,6 +115,7 @@ class Entries extends Component{
         tileClassName="calendar2"
         onChange={this.onChange}
         value={this.state.date}
+        
         /> 
         <br/>
         <h3>{this.state.prompt2}</h3>

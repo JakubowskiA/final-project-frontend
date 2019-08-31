@@ -25,6 +25,7 @@ class EntryForm extends Component{
         })
     }
 
+
     // submitEntry=(event, entry)=>{
     //     event.preventDefault()
     //     console.log('entry',entry)
@@ -49,7 +50,37 @@ class EntryForm extends Component{
     //     })
     //   }
 
+    submitEntry=(event, entry)=>{
+        event.preventDefault()
+        console.log('entry',entry)
+        fetch('http://localhost:3000/entries',{
+          method: 'POST',
+          headers:{
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+          },body:JSON.stringify({
+            entry: {
+                pre_level: this.state.preLevel,
+                stressors: this.state.stressors,
+                evaluation: this.state.evaluation,
+                action:  this.state.action, 
+                positivity:  this.state.positivity,
+                post_level: this.state.postLevel,
+                user_id: this.props.userId
+            }
+          })
+        })
+        .then(res=>res.json())
+        .then(data => {
+            console.log('Response Data', data);
+            this.setState({ user: data.user });
+            this.props.history.push('/welcome');
+        })
+      }
+
+
     render(){
+        
     return(
         
         <form onSubmit={(event)=>this.submitEntry(event, this.state)}>

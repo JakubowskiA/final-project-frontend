@@ -25,6 +25,31 @@ class EntryForm extends Component{
         })
     }
 
+
+    // submitEntry=(event, entry)=>{
+    //     event.preventDefault()
+    //     console.log('entry',entry)
+    //     fetch('http://localhost:3000/entries',{
+    //       method: 'POST',
+    //       headers:{
+    //         "Content-Type": "application/json",
+    //         "Accept": "application/json"
+    //       },body:JSON.stringify({
+    //         entry: {
+    //           preLevel: entry.preLevel,
+    //           stressors: entry.stressors,
+    //           evaluation: entry.evaluation
+    //         }
+    //       })
+    //     })
+    //     .then(res=>res.json())
+    //     .then(data => {
+    //         console.log('Response Data', data);
+    //         this.setState({ user: data.user });
+    //         this.props.history.push('/welcome');
+    //     })
+    //   }
+
     submitEntry=(event, entry)=>{
         event.preventDefault()
         console.log('entry',entry)
@@ -52,6 +77,7 @@ class EntryForm extends Component{
             this.props.history.push('/welcome');
         })
       }
+
 
     render(){
         

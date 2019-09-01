@@ -1,7 +1,6 @@
 import React, {Component, Fragment} from 'react';
 import { withRouter } from 'react-router-dom';
 import moment from 'moment';
-import Entry from './Entry'
 
 class Entries extends Component{
     state={

@@ -5,6 +5,7 @@ import Header from './Header';
 import NavBar from './NavBar';
 
 import StressLevelTracker from './StressLevelTracker';
+import StressLevels from './StressLevels'
 import EntryForm from './EntryForm';
 import Entries from './Entries'
 
@@ -42,12 +43,12 @@ class Main extends Component {
                         />
                     )}
                 />
-                {/* <Route
-                    path='/main/'
+                <Route
+                    path='/main/stress-levels'
                     render={() => (
-                        <Main />
+                        <StressLevels />
                     )}
-                /> */}
+                />
             </Fragment>
         )
     }

@@ -93,21 +93,21 @@ class StressLevelTracker extends Component{
             datasets: [
               {
                 label: 'Initial Stress Levels',
-                backgroundColor: 'rgba(56, 215, 224, 0.4)',
+                backgroundColor: 'rgba(56, 215, 224, 0.5)',
                 borderColor: 'rgb(56, 215, 224)',
                 borderWidth: 1,
-                hoverBackgroundColor: 'rgba(255,99,132,0.4)',
-                hoverBorderColor: 'rgba(255,99,132,1)',
+                hoverBackgroundColor: 'rgba(56, 215, 224, 0.3)',
+                hoverBorderColor: 'rgb(56, 215, 224)',
                 // data: this.state.preLevels
                 data: [...this.state.preLevels]
               },
               {
                 label: 'Final Stress Levels',
-                backgroundColor: 'rgba(255,99,132,0.2)',
-                borderColor: 'rgba(255,99,132,1)',
+                backgroundColor: 'rgb(61, 255, 122, 0.5)',
+                borderColor: 'rgb(61, 255, 122)',
                 borderWidth: 1,
-                hoverBackgroundColor: 'rgba(255,99,132,0.4)',
-                hoverBorderColor: 'rgba(255,99,132,1)',
+                hoverBackgroundColor: 'rgb(61, 255, 122, 0.3)',
+                hoverBorderColor: 'rgb(61, 255, 122)',
                 data: [...this.state.postLevels]
               }
             ],
@@ -116,7 +116,7 @@ class StressLevelTracker extends Component{
 
         
     return(
-        <Fragment>
+        <Fragment >
             <div>INSERT STRESS LEVELS</div> 
             {/* <canvas id="myChart"></canvas> */}
             <div>

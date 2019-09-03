@@ -14,8 +14,12 @@ class StressLevelTracker extends Component{
     }
     
     selectData=()=>{
-
+// NEXT STEPS!!!!!!!! TO LIMIT DATA, BEFORE CHART INFO IS EXTRACTED USE SLICE TO GRAB X MOST RECENTLY CREATED PIECES OF DATA
         let allData = this.state.data
+        if (allData.length > 15){
+            allData.slice(-15)
+        } 
+
         console.log('ohi', allData);
         // allData.forEach()
         let creationDates = []
@@ -89,8 +93,8 @@ class StressLevelTracker extends Component{
             datasets: [
               {
                 label: 'Initial Stress Levels',
-                backgroundColor: 'rgba(255,99,132,0.2)',
-                borderColor: 'rgba(255,99,132,1)',
+                backgroundColor: 'rgba(56, 215, 224, 0.4)',
+                borderColor: 'rgb(56, 215, 224)',
                 borderWidth: 1,
                 hoverBackgroundColor: 'rgba(255,99,132,0.4)',
                 hoverBorderColor: 'rgba(255,99,132,1)',

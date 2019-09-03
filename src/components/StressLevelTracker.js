@@ -14,7 +14,6 @@ class StressLevelTracker extends Component{
     }
     
     selectData=()=>{
-// NEXT STEPS!!!!!!!! TO LIMIT DATA, BEFORE CHART INFO IS EXTRACTED USE SLICE TO GRAB X MOST RECENTLY CREATED PIECES OF DATA
         let allData = this.state.data
         if (allData.length > 15){
             allData.slice(-15)
@@ -117,17 +116,12 @@ class StressLevelTracker extends Component{
         
     return(
         <Fragment >
-            <div>INSERT STRESS LEVELS</div> 
-            {/* <canvas id="myChart"></canvas> */}
             <div>
             < Bar 
             data={data}
             options={{
                 scales: {
                   yAxes: [{
-                    // ticks: {
-                    //   beginAtZero: true
-                    // }
                     ticks: {
                         min: 0, // minimum value
                         max: 10 // maximum value

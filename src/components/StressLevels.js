@@ -4,7 +4,6 @@ const StressLevels=()=>{
     return(
     <div className="page">
         <h1 >Stress Scale</h1>
-        <br/>
         <table border="1">
             <thead>
             <tr>

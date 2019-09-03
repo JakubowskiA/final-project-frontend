@@ -114,10 +114,9 @@ class Entries extends Component{
         style="color:black !important"
         tileClassName="calendar2"
         onChange={this.onChange}
-        value={this.state.date}
-        
+        value={this.state.date}       
         /> 
-        <br/>
+       
         <h3>{this.state.prompt2}</h3>
          {entriesArray}
         <br/>

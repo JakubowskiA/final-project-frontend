@@ -7,7 +7,8 @@ import NavBar from './NavBar';
 import StressLevelTracker from './StressLevelTracker';
 import StressLevels from './StressLevels'
 import EntryForm from './EntryForm';
-import Entries from './Entries'
+import Entries from './Entries';
+import SelfCare from './SelfCare'
 
 class Main extends Component {
     render(){
@@ -47,6 +48,12 @@ class Main extends Component {
                     path='/main/stress-levels'
                     render={() => (
                         <StressLevels />
+                    )}
+                />
+                <Route
+                    path='/main/self-care'
+                    render={() => (
+                        <SelfCare />
                     )}
                 />
             </Fragment>

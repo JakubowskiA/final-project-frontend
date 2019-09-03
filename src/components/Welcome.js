@@ -11,6 +11,7 @@ class Welcome extends Component{
         <button className="welcome-btn" onClick={_ => this.props.history.push('/main/entries')}>See Old Entries</button>
         <button className="welcome-btn" onClick={_ => this.props.history.push('/main/stress-level-tracker')}>Stress Tracker</button>
         <button className="welcome-btn" onClick={_ => this.props.history.push('/main/stress-levels')}>Stress Scale</button>
+        <button className="welcome-btn" onClick={_ => this.props.history.push('/main/self-care')}>Self Care Suggestions</button>
     </Fragment>
     )}
 }

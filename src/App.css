@@ -141,6 +141,7 @@
 .page{
   margin: 2%;
   border: #000000;
+  max-width: 80%;
 }
 
 .scale-item{
@@ -162,4 +163,12 @@ table, th, td {
 
 .centered-table-element{
   text-align: center
+}
+
+.chartjs-render-monitor {
+  animation: chartjs-render-animation 0.001s;
+  max-width: 90vw;
+  max-height: 85vh;
+  margin: 3%
+  /* padding: 10% */
 }

@@ -15,6 +15,7 @@ class NavBar extends React.Component {
        <span className="nav-item" onClick={_ => this.props.history.push("/main/entries")}>See Old Entries</span>
        <span className="nav-item" onClick={_ => this.props.history.push("/main/stress-level-tracker")}>Stress Tracker</span>
        <span className="nav-item" onClick={_ => this.props.history.push("/main/stress-levels")}>Stress Scale</span>
+       <span className="nav-item" onClick={_ => this.props.history.push("/main/self-care")} >Self Care Ideas</span>
        <span className="nav-item" onClick={_ => this.props.history.push("/")} onClick={this.logout}>Logout</span>
    </nav>
     )}

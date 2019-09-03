@@ -55,6 +55,7 @@ const StressLevels=()=>{
                         <li>Feeling moderately stressed</li>
                         <li>Difficulty concentrating</li>
                         <li>Feeling overwhelmed</li>
+                        <li>Feeling irritable</li>
                     </ul>
                 </td>
             </tr>

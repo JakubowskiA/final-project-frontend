@@ -229,6 +229,12 @@ tbody{
   text-align: center
 }
 
+.symptoms-table{
+  -moz-columns:2;
+  -webkit-columns:2;
+  columns:2;
+}
+
 /* TABLE STYLING END */
 
 .chartjs-render-monitor {

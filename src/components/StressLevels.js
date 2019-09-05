@@ -128,9 +128,8 @@ const StressLevels=()=>{
             </thead>
             <tbody>
             <tr>
-                <td>
-                    <h2></h2>
-                    <ul>
+                <td >
+                    <ul className="symptoms-table">
                         <li>Fast heartbeat</li>
                         <li>Shaking</li>
                         <li>Chest pain</li>

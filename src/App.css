@@ -1,8 +1,32 @@
 .App {
   text-align: center;
+  /* background-color: #61dafb; */
+  min-height: 100vh;
+  height: 100%;
+  
+  
+  /* background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%); */
+  /* background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%); */
+  background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+  /* background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%); */
+  /* background-image: linear-gradient(-225deg, #FF057C 0%, #7C64D5 48%, #4CC3FF 100%); */
 }
+/* BACKGROUND CHOICES
+background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+background-image: linear-gradient(to top, #cd9cf2 0%, #f6f3ff 100%);
+background-image: linear-gradient(-225deg, #FF057C 0%, #7C64D5 48%, #4CC3FF 100%);
 
-/* .App-logo {
+*/
+
+/* 
+
+.App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
   pointer-events: none;
@@ -38,10 +62,39 @@
   height: 4em;
   margin: .4em;
   border-radius: 5%;
+  /* display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform; */
 }
 
+.hvr-grow {
+  display: inline-block;
+  vertical-align: middle;
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  transition-duration: 0.3s;
+  transition-property: transform;
+}
+
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+  transform: scale(1.1);
+}
+
+
 .nav-item{
-  margin: 2em;
+  margin-left: 2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 .nav-bar{
@@ -126,15 +179,18 @@
 
 .show-entry{
   text-align: left;
-  margin: 15%;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 5%;
   border: #757575;
   border-style: double;
   padding: 5%;
-  border-radius: 2%
+  border-radius: 2%;
+  background-color: aliceblue
 }
 
 .input-textarea{
-  min-width: 50%;
+  min-width: 70%;
   min-height: 3.5em;
 }
 
@@ -148,10 +204,13 @@
   border: #000000;
 }
 
+/* TABLE STYLING START */
+
 table {
   border-collapse: collapse;
-  width: 50%;
-  margin-left: 25%
+  width: 60%;
+  min-width: 60%;
+  margin-left: 20%
 }
 
 table, th, td {
@@ -161,14 +220,57 @@ table, th, td {
   text-align: left
 }
 
+tbody{
+  background-color: white;
+  width: 50%;
+}
+
 .centered-table-element{
   text-align: center
 }
 
+/* TABLE STYLING END */
+
 .chartjs-render-monitor {
   animation: chartjs-render-animation 0.001s;
-  max-width: 90vw;
+  max-width: 88vw;
   max-height: 85vh;
-  margin: 3%
-  /* padding: 10% */
+  margin: 3%;
+  background-color: white;
+  padding: 2%;
+  border-radius: 2%;
+}
+
+.page-left{
+  text-align: left;
+  margin: 3%;
+  line-height: 1.5em;
+}
+
+header{
+  font-size: 36pt;
+  background-color: aquamarine;
+  padding: 2%;
+  /* font-family: 'Poiret One', cursive;
+  font-family: 'Cherry Swash', cursive;
+  font-family: 'Voces', cursive; */
+}
+
+.entry-form{
+  
+  margin-top: 5%;
+  margin-left: 18%;
+  margin-right: 18%;
+  border: #757575;
+  border-style: double;
+  padding: 2%;
+  border-radius: 2%;
+  background-color: aliceblue
+}
+
+/* ANIMATIONS */
+
+.slide-fwd-center {
+	-webkit-animation: slide-fwd-center 0.4s cubic-bezier(0.600, 0.040, 0.980, 0.335) forwards;
+	        animation: slide-fwd-center 0.4s cubic-bezier(0.600, 0.040, 0.980, 0.335) forwards;
 }

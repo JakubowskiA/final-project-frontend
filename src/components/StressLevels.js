@@ -2,7 +2,7 @@ import React from 'react';
 
 const StressLevels=()=>{
     return(
-    <div className="page">
+    <div className="App">
         <h1 >Stress Scale</h1>
         <table border="1">
             <thead>
@@ -146,6 +146,7 @@ const StressLevels=()=>{
             
             </tbody>
     </table>
+    <br/>
     </div>
     )
 }

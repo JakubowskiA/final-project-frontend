@@ -83,7 +83,7 @@ class EntryForm extends Component{
         
     return(
         
-        <form onSubmit={(event)=>this.submitEntry(event, this.state)}>
+        <form onSubmit={(event)=>this.submitEntry(event, this.state)} className="entry-form">
         <br/>
             <label>Stress Level: {this.state.preLevel}</label>
             <br/>

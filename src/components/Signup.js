@@ -21,9 +21,9 @@ class NewUserForm extends Component {
 
     render() {
         return (
-            <div className="book-background">
+            <div className="App">
                 <div className="login-card">
-                    <br />
+                    <br /><br />
                     <h1>Sign Up</h1>
                     <br />
                     <Form onSubmit={() => this.props.createUser(this.state)}>
@@ -39,7 +39,7 @@ class NewUserForm extends Component {
                         <br />
                         <Form.Button disabled={!this.isStateValid()}>Create Account</Form.Button>
                     </Form>
-                    <br />
+                    
                 </div>
             </div>
         )

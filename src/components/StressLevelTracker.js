@@ -116,7 +116,7 @@ class StressLevelTracker extends Component{
         
     return(
         <Fragment >
-            <div>
+            <div className="App">
             < Bar 
             data={data}
             options={{

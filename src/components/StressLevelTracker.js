@@ -3,6 +3,7 @@ import {Bar} from 'react-chartjs-2';
 // import {pick} from 'underscore';
 import moment from 'moment';
 
+const NUM_SHOWN = 5
 
 class StressLevelTracker extends Component{
     state={
@@ -10,23 +11,36 @@ class StressLevelTracker extends Component{
         preLevels:[],
         postLevels:[],
         creationDates:[],
-        formattedDates:[]
+        formattedDates:[],
+        index:0
     }
     
     selectData=()=>{
+        
+        console.log('i', this.state.index);
+        
         let allData = this.state.data
-        if (allData.length > 15){
-            allData.slice(-15)
-        } 
+        let displayData
+        if (this.state.index>NUM_SHOWN){
+          displayData = allData.slice((this.state.index-NUM_SHOWN), this.state.index)
+        } else{
+          displayData = allData.slice(0, this.state.index)
+        }
+      //   if (this.state.data.length>NUM_SHOWN){
+      //   displayData = allData.slice((this.state.index-NUM_SHOWN), this.state.index)
+      // } else{
+      //   displayData = allData
+      // }
+        // if (allData.length > 15){
+        //     allData.slice(-15)
+        // } 
 
-        console.log('ohi', allData);
-        // allData.forEach()
         let creationDates = []
         let preLevels = []
         let postLevels = []
 
         
-          allData.forEach(a=>(
+          displayData.forEach(a=>(
             preLevels.push(Object.values(a)[1]),
             postLevels.push(Object.values(a)[6]),
             creationDates.push(Object.values(a)[8]),
@@ -44,12 +58,30 @@ class StressLevelTracker extends Component{
         let formattedDates = creationDates.map(
             date=>(
                 // moment(String(date)).format('LLL')
-                moment(String(date)).format('ll')
+                moment(String(date)).format('lll')
             )
         )
         this.setState({formattedDates})
         console.log('datesop',formattedDates)
         
+    }
+
+    earlierEntries=()=>{
+      console.log('gu', NUM_SHOWN);
+      
+      let currentIndexE = this.state.index
+      // if (currentIndex > NUM_SHOWN){
+      this.setState({index:currentIndexE-NUM_SHOWN}, ()=>this.selectData())
+    // }
+      
+    }
+
+    laterEntries=()=>{
+      let currentIndexL = this.state.index
+      // if (currentIndex < this.state.data.length){
+      this.setState({index:currentIndexL+NUM_SHOWN}, ()=>this.selectData())
+    // }
+      
     }
 
     componentDidMount(){
@@ -63,7 +95,8 @@ class StressLevelTracker extends Component{
           })
             .then(resp => resp.json())
             .then(data => {
-              this.setState({ data });
+              this.setState({ data }); 
+              this.setState({ index:this.state.data.length })           
               this.selectData()
             });
     }
@@ -116,7 +149,7 @@ class StressLevelTracker extends Component{
         
     return(
         <Fragment >
-            <div className="App">
+            <div className="App" >
             < Bar 
             data={data}
             options={{
@@ -130,6 +163,8 @@ class StressLevelTracker extends Component{
                 }
               }}
             />
+            <button onClick={this.earlierEntries} disabled={this.state.index <= NUM_SHOWN}>Earlier</button>
+            <button onClick={this.laterEntries} disabled={this.state.index === this.state.data.length}>Later</button>
             </div>
         </Fragment>
     )}

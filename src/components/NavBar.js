@@ -11,6 +11,7 @@ class NavBar extends React.Component {
   render(){
     return(
    <nav className="nav-bar">
+     <span className="nav-name hvr-grow">AppName</span>
        <span className="nav-item hvr-grow" onClick={_ => this.props.history.push('/main/new-entry')}>New Entry</span>
        <span className="nav-item hvr-grow" onClick={_ => this.props.history.push("/main/entries")}>Old Entries</span>
        <span className="nav-item hvr-grow" onClick={_ => this.props.history.push("/main/stress-level-tracker")}>Stress Tracker</span>

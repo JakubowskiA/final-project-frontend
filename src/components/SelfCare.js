@@ -1,4 +1,6 @@
 import React, { Component, Fragment } from 'react';
+import { Card } from 'semantic-ui-react';
+
 
 // import SelfCareData from '../sourceData'
 
@@ -34,7 +36,7 @@ class SelfCare extends Component {
                 "Tags": ""
             },
             {
-                "Name": "Draw (you don’t have to be good)",
+                "Name": "Draw",
                 "Tags": "creative"
             },
             {
@@ -98,10 +100,6 @@ class SelfCare extends Component {
                 "Tags": "active"
             },
             {
-                "Name": "Bake",
-                "Tags": ""
-            },
-            {
                 "Name": "Do a random act of kindness",
                 "Tags": "charitable"
             },
@@ -118,10 +116,6 @@ class SelfCare extends Component {
                 "Tags": "relaxing, quick fix"
             },
             {
-                "Name": "Go to bed early",
-                "Tags": ""
-            },
-            {
                 "Name": "Take a bath",
                 "Tags": "relaxing"
             },
@@ -134,7 +128,7 @@ class SelfCare extends Component {
                 "Tags": "relaxing"
             },
             {
-                "Name": "Attend a counseling session or support group",
+                "Name": "Go to a or support group",
                 "Tags": "social"
             },
             {
@@ -166,12 +160,8 @@ class SelfCare extends Component {
                 "Tags": ""
             },
             {
-                "Name": "Cook ",
+                "Name": "Cook or bake",
                 "Tags": ""
-            },
-            {
-                "Name": "Be kind to someone else",
-                "Tags": "social"
             },
             {
                 "Name": "Declutter something",
@@ -234,10 +224,6 @@ class SelfCare extends Component {
                 "Tags": "quick fix"
             },
             {
-                "Name": "Visit a dog park and watch the dogs play",
-                "Tags": "active"
-            },
-            {
                 "Name": "Start a gratitude journal",
                 "Tags": ""
             },
@@ -258,11 +244,7 @@ class SelfCare extends Component {
                 "Tags": "active, quick fix"
             },
             {
-                "Name": "Take some photos of things that make you smile",
-                "Tags": ""
-            },
-            {
-                "Name": "Write down your negative thoughts and throw them away or burn them",
+                "Name": "Write down your thoughts and burn them",
                 "Tags": ""
             },
             {
@@ -282,16 +264,12 @@ class SelfCare extends Component {
                 "Tags": "relaxing"
             },
             {
-                "Name": "Talk about your feelings with someone who will listen",
+                "Name": "Talk about your feelings with someone ",
                 "Tags": "social"
             },
             {
                 "Name": "Plant something",
                 "Tags": "productive"
-            },
-            {
-                "Name": "Set a timer and stay off of social media for that time",
-                "Tags": ""
             },
             {
                 "Name": "Visit an animal shelter",
@@ -302,24 +280,12 @@ class SelfCare extends Component {
                 "Tags": "relaxing"
             },
             {
-                "Name": "Wear something that makes you feel good",
-                "Tags": ""
-            },
-            {
-                "Name": "Pick one thing that you need to do and get it done",
+                "Name": "Pick one thing you need to do and get it done",
                 "Tags": "productive"
             },
             {
                 "Name": "Listen to a song you love",
                 "Tags": "quick fix"
-            },
-            {
-                "Name": "Go through your closet and donate the clothes you haven’t worn in years",
-                "Tags": "productive, charitable"
-            },
-            {
-                "Name": "Learn a new skill",
-                "Tags": "productive"
             },
             {
                 "Name": "Listen to a podcast",
@@ -332,10 +298,6 @@ class SelfCare extends Component {
             {
                 "Name": "Take a nap",
                 "Tags": "relaxing"
-            },
-            {
-                "Name": "Make a playlist",
-                "Tags": ""
             },
             {
                 "Name": "Pick or buy yourself flowers",
@@ -354,12 +316,16 @@ class SelfCare extends Component {
                 "Tags": "active"
             },
             {
-                "Name": "Go to a museum",
-                "Tags": ""
+                "Name": "Think of what you love about yourself",
+                "Tags": "quick fix"
             },
             {
-                "Name": "Think of something you love about yourself",
+                "Name": "Blow bubbles",
                 "Tags": "quick fix"
+            },
+            {
+                "Name": "Plan a vacation",
+                "Tags": ""
             }
         ]
         let ideas = allIdeas.filter(idea=>
@@ -367,7 +333,12 @@ class SelfCare extends Component {
         
         const ideasArray = ideas.map(
             idea=>(
-                <li>{idea.Name}</li>
+                <div class="card">               
+                    <h4>{idea.Name}</h4>
+                </div>
+            // <Card>
+            //         {idea.Name}
+            // </Card>  
             )
         )
         
@@ -390,9 +361,12 @@ class SelfCare extends Component {
                     </select>
                 </form>
                 
-                <div>
-                    <ul className="page-left">{ideasArray}</ul>
+                <div className="page-left ">
+                    {ideasArray}
                 </div>
+                {/* <Card.Group itemsPerRow={6} >
+                    {ideasArray}
+                </Card.Group> */}
                 <br/><br/>
             </Fragment>
         )

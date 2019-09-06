@@ -4,12 +4,12 @@ import { withRouter } from 'react-router-dom';
 
 class EntryForm extends Component{
     state={
-        preLevel:null,
+        preLevel:"What is your stress level?",
         stressors:"",
         evaluation:"",
         action: "", 
         positivity: "",
-        postLevel:null
+        postLevel:"What is your stress level now?"
 
     }
 
@@ -82,7 +82,7 @@ class EntryForm extends Component{
     render(){
         
     return(
-        
+        <Fragment>
         <form onSubmit={(event)=>this.submitEntry(event, this.state)} className="entry-form">
         <br/>
             <label>Stress Level: {this.state.preLevel}</label>
@@ -167,8 +167,10 @@ class EntryForm extends Component{
             <br/>
             <br/>
             <input type="Submit"/>
-            <br/><br/>
+            <br/>
         </form>
+        <br/>
+        </Fragment>
     )}
 }
 

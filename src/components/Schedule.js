@@ -1,8 +1,8 @@
 // console.clear();
 
 // const DAYS_OF_WEEK = [
-// 	'Domingo', 'Lunes', 'Martes', 'Miércoles',
-//   'Jueves', 'Viernes', 'Sábado'
+// 	'Sunday', 'Monday', 'Tuesday', 'Wednesday',
+//   'Thursday', 'Friday', 'Saturday'
 // ];
 
 // const { Component, PropTypes } = React;
@@ -34,9 +34,9 @@
 
 // /* PropTypes */
 // const appointmentPropType = PropTypes.shape({
-//   nombre: PropTypes.string.isRequired,
-//   hora_inicio: PropTypes.string.isRequired,
-//   hora_termino: PropTypes.string.isRequired,
+//   name: PropTypes.string.isRequired,
+//   start: PropTypes.string.isRequired,
+//   end: PropTypes.string.isRequired,
 //   blockSpan: PropTypes.number
 // });
 
@@ -46,11 +46,11 @@
 // class Calendar extends Component {
 //   static propTypes = {
 //     appointments: PropTypes.shape({
-//       lunes: appointmentsPropType.isRequired,
-//       martes: appointmentsPropType.isRequired,
-//       miercoles: appointmentsPropType.isRequired,
-//       jueves: appointmentsPropType.isRequired,
-//       viernes: appointmentsPropType.isRequired
+//       monday: appointmentsPropType.isRequired,
+//       tuesday: appointmentsPropType.isRequired,
+//       wednesday: appointmentsPropType.isRequired,
+//       thursday: appointmentsPropType.isRequired,
+//       friday: appointmentsPropType.isRequired
 //     }).isRequired
 //   };
   
@@ -72,8 +72,8 @@
     
 //     for (let day in appointments) {
 //       appointments[day].forEach(appointment => {
-//       	const startTime = appointment.hora_inicio;
-//         const endTime = appointment.hora_termino;
+//       	const startTime = appointment.start;
+//         const endTime = appointment.end;
 //       	let blockSpan = 0;
         
 //         if (startTime === '00:00' && endTime === '00:00') {
@@ -85,7 +85,7 @@
 //           let minutes = parseInt(startSplit[1]);
 //           let timeString = appointment.startTime;
 
-//           while (timeString !== appointment.hora_termino) {
+//           while (timeString !== appointment.end) {
 //             blockSpan++;
 //             minutes += blockSize;
 
@@ -126,11 +126,11 @@
 //         <Row key={time}>
 //           <TimeCell className="calendar__cell--time-col">{time}</TimeCell>
 //           <AppointmentCell className="calendar__cell--time-spacing" />
-//           <AppointmentCell appointment={block.lunes} />
-//           <AppointmentCell appointment={block.martes} />
-//           <AppointmentCell appointment={block.miercoles} />
-//           <AppointmentCell appointment={block.jueves} />
-//           <AppointmentCell appointment={block.viernes} />
+//           <AppointmentCell appointment={block.monday} />
+//           <AppointmentCell appointment={block.tuesday} />
+//           <AppointmentCell appointment={block.wednesday} />
+//           <AppointmentCell appointment={block.thursday} />
+//           <AppointmentCell appointment={block.friday} />
 //           <AppointmentCell className="calendar__cell--weekend" />
 //           <AppointmentCell className="calendar__cell--weekend" />
 //         </Row>
@@ -218,12 +218,12 @@
 
 // const Appointment = (props) => {
 // 	const { appointment } = props;  
-// 	const wholeDay = appointment.hora_inicio === '00:00' &&
-//   	appointment.hora_termino === '00:00';
+// 	const wholeDay = appointment.start === '00:00' &&
+//   	appointment.end === '00:00';
     
 //   const time = wholeDay ?
 //   	'Todo el día' :
-//     `${appointment.hora_inicio} - ${appointment.hora_termino}`;
+//     `${appointment.start} - ${appointment.end}`;
 
 // 	return (
 //     <div {...props} className="calendar__appointment">
@@ -231,7 +231,7 @@
 //         {time}
 //       </div>
 //       <div className="calendar__appointment__name">
-//         {appointment.nombre}
+//         {appointment.name}
 //       </div>
 //     </div>
 // 	);
@@ -333,17 +333,17 @@
 // };
 
 // renderCalendar({
-//   lunes: [
-//     { nombre: 'Gustavo', hora_inicio: '08:00', hora_termino: '09:00' },
-//     { nombre: 'Felipe', hora_inicio: '09:30', hora_termino: '11:00' },
-//     { nombre: 'Cony', hora_inicio: '18:00', hora_termino: '18:30' }
+//   monday: [
+//     { name: 'Gustavo', start: '08:00', end: '09:00' },
+//     { name: 'Felipe', start: '09:30', end: '11:00' },
+//     { name: 'Cony', start: '18:00', end: '18:30' }
 //   ],
-//   martes: [],
-//   miercoles: [
-//   	{ nombre: 'Nicole', hora_inicio: '11:30', hora_termino: '14:00' }
+//   tuesday: [],
+//   wednesday: [
+//   	{ name: 'Nicole', start: '11:30', end: '14:00' }
 //   ],
-//   jueves: [
-//   	{ nombre: 'Alejandro', hora_inicio: '00:00', hora_termino: '00:00' }
+//   thursday: [
+//   	{ name: 'Alejandro', start: '00:00', end: '00:00' }
 //   ],
-//   viernes: []
+//   friday: []
 // });

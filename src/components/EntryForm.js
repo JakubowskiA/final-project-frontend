@@ -82,7 +82,7 @@ class EntryForm extends Component{
     render(){
         
     return(
-        
+        <div>
         <form onSubmit={(event)=>this.submitEntry(event, this.state)} className="entry-form">
         <br/>
             <label>Stress Level: {this.state.preLevel}</label>
@@ -166,9 +166,11 @@ class EntryForm extends Component{
             <input type="range" min="1" max="10" step="1" onChange={this.handleChange} name="postLevel"/>
             <br/>
             <br/>
-            <input type="Submit"/>
+            <input type="Submit" className="btn"/>
             <br/><br/>
         </form>
+        <br/><br/>
+        </div>
     )}
 }
 

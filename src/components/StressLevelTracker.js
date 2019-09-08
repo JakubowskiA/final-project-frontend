@@ -149,7 +149,7 @@ class StressLevelTracker extends Component{
         
     return(
         <Fragment >
-            <div className="App" >
+            <div >
             < Bar 
             data={data}
             options={{
@@ -163,8 +163,11 @@ class StressLevelTracker extends Component{
                 }
               }}
             />
-            <button onClick={this.earlierEntries} disabled={this.state.index <= NUM_SHOWN}>Earlier</button>
-            <button onClick={this.laterEntries} disabled={this.state.index === this.state.data.length}>Later</button>
+            <div >
+            <button className="btn earlier-btn" onClick={this.earlierEntries} disabled={this.state.index <= NUM_SHOWN}>Earlier</button>
+            <button className="btn later-btn" onClick={this.laterEntries} disabled={this.state.index === this.state.data.length}>Later</button>
+            </div>
+            <br/><br/>
             </div>
         </Fragment>
     )}

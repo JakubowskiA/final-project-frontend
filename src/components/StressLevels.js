@@ -3,8 +3,9 @@ import React from 'react';
 const StressLevels=()=>{
     return(
     <div >
-        <h1 >Stress Scale</h1>
-        <table border="1">
+        {/* <h1 >Stress Scale</h1> */}
+        <br/><br/>
+        <table border="1" className="rounded" style={{'borderRadius':'1%!important'}}>
             <thead>
             <tr>
                 <th className="centered-table-element">Stress Level</th>

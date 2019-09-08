@@ -4,7 +4,7 @@ import React, { Component, Fragment } from 'react';
 
 class SelfCare extends Component {
     state={
-        searchTerm:"",
+        searchTerm:"Active",
         ideas:[]
     }
 

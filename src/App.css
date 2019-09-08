@@ -202,7 +202,11 @@ table {
   width: 60%;
   min-width: 60%;
   margin-left: 20%;
-  border-radius: 3%
+  border-radius: 3%;
+}
+
+.rounded{
+  border-radius: 2% !important
 }
 
 table, th, td {
@@ -220,7 +224,8 @@ th{
 
 td{
   padding: .2em;
-  text-align: left
+  text-align: left;
+  font-size: 10pt;
 }
 
 tbody{

@@ -22,10 +22,10 @@ class NewUserForm extends Component {
     render() {
         return (
             <div className="App">
+                    <br /><br /><br />
                 <div className="login-card">
-                    <br /><br />
-                    <h1>Sign Up</h1>
-                    <br />
+                    <h1>Welcome to Serene!</h1>
+                    <h3>Sign Up</h3>
                     <Form onSubmit={() => this.props.createUser(this.state)}>
                         <Form.Field>
                             <Form.Input name="name" placeholder="Enter your name" onChange={this.handleChange} value={this.state.name} />

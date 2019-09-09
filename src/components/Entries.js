@@ -95,7 +95,7 @@ class Entries extends Component{
     return(
     <Fragment>
 
-        <h1>{this.state.prompt1}</h1>
+        <h2 className="choose-date">Choose a date</h2>
        
         {/* CALENDAR1
         <div onClick={this.selectDay}>
@@ -117,7 +117,7 @@ class Entries extends Component{
         value={this.state.date}       
         /> 
        
-        <h3>{this.state.prompt2}</h3>
+       
          {entriesArray}
         <br/>
        

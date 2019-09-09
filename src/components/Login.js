@@ -36,8 +36,8 @@ render() {
                 <Form.Button>Submit</Form.Button>
             </Form>
 
-            <h3>New User?</h3>
-            <h3><a className="hvr-grow" onClick={_ => this.props.history.push('/signup')}>Sign up here!</a></h3>
+            <h4>New User?</h4>
+            <h4><a className="hvr-grow" onClick={_ => this.props.history.push('/signup')}>Sign up here!</a></h4>
             
         </div>
     )

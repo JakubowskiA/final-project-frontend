@@ -13,11 +13,6 @@ class EntryForm extends Component{
 
     }
 
-    // handleChangePreLevel=(event)=>{
-    //     this.setState({preLevel:event.target.value})
-    //     console.log(event.target.value);  
-    // }
-
     handleChange = event => {
         const inputType = event.target.name
         this.setState({
@@ -133,7 +128,7 @@ class EntryForm extends Component{
                 <textarea name="action" 
                 onChange={this.handleChange}
                 className="input-textarea"
-                placeholder={"Put the journal down and do something just for you. This is self care. When you are done, write what you did. This is a good way to keep track of your self care and hold yourself accountable for practicing self care."}
+                placeholder={"Put your device down and do something just for you. This is self care. When you are done, write what you did. This is a good way to keep track of your self care and hold yourself accountable for practicing self care."}
                 />
             </div>
             <br/>

@@ -12,6 +12,7 @@ class Welcome extends Component{
         <button className="welcome-btn hvr-grow" onClick={_ => this.props.history.push('/main/stress-level-tracker')}>Stress Tracker</button>
         <button className="welcome-btn hvr-grow" onClick={_ => this.props.history.push('/main/stress-levels')}>Stress Scale</button>
         <button className="welcome-btn hvr-grow" onClick={_ => this.props.history.push('/main/self-care')}>Self Care Suggestions</button>
+        <button className="welcome-btn hvr-grow" onClick={_ => this.props.history.push('/main/schedule')}>Self Care Schedule</button>
     </Fragment>
     )}
 }

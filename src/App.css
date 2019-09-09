@@ -40,12 +40,13 @@ background-image: linear-gradient(-225deg, #FF057C 0%, #7C64D5 48%, #4CC3FF 100%
 }
 
 .welcome-btn{
-  font-size: 36pt;
-  width: 6em;
+  font-size: 30pt;
+  width: 6.5em;
   height: 3.5em;
   margin: .3em;
   border-radius: 5%;
   background-color: aliceblue;
+  font-family: 'Montserrat', sans-serif;
   /* background: repeating-linear-gradient(
   90deg,
   #ff5289,
@@ -66,7 +67,8 @@ background-image: linear-gradient(-225deg, #FF057C 0%, #7C64D5 48%, #4CC3FF 100%
 
 .welcome-btn:hover{
   background-image:url('IMG_9267.JPG');
-  background-size: cover
+  background-size: cover;
+  border-color: rgb(31, 156, 206);
   /* display: inline-block;
     vertical-align: middle;
     -webkit-transform: perspective(1px) translateZ(0);

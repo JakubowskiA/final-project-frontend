@@ -19,9 +19,11 @@ class Login extends Component{
 render() {
     return (
         <div className="App">
-            <br /><br />
-            <h1>Sign In</h1>
-            <br />
+            <br /><br /><br />
+            <div className="login-card">
+            <h1>Welcome to Serene!</h1>
+            <h3>Sign In</h3>
+            
             <Form onSubmit={_ => this.props.login(this.state)} >
 
                 <Form.Field>
@@ -38,7 +40,7 @@ render() {
 
             <h4>New User?</h4>
             <h4><a className="hvr-grow" onClick={_ => this.props.history.push('/signup')}>Sign up here!</a></h4>
-            
+            </div>
         </div>
     )
 }

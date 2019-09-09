@@ -3,14 +3,24 @@
   /* background-color: aliceblue; */
   min-height: 100vh;
   height: 100%;
-  background-image:url('IMG_9267.JPG');
-  background-size: cover
+  /* background-color: aliceblue */
+  background: repeating-linear-gradient(
+    90deg,
+    #F9B8C2,
+    #F9B8C2 5%,
+    #FFF0D6 5%,
+    #FFF0D6 10%,
+    #CDF4D6 10%,
+    #cdf4d6 15%,
+    #AEF9EF 15%,
+    #AEF9EF 20%,
+    #8fdeea 20%,
+    #8FDEEA 25%
+  );
+
+  /* background-image:url('IMG_9267.JPG');
+  background-size: cover */
   
-  /* background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%); */
-  /* background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%); */
-  /* background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%); */
-  /* background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%); */
-  /* background-image: linear-gradient(-225deg, #FF057C 0%, #7C64D5 48%, #4CC3FF 100%); */
 }
 /* BACKGROUND CHOICES
 background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
@@ -25,9 +35,14 @@ background-image: linear-gradient(-225deg, #FF057C 0%, #7C64D5 48%, #4CC3FF 100%
 
 */
 
-
-.App-link {
-  color: #61dafb;
+.login-card{
+  background-color:  #8FDEEA;
+  border-color:  rgb(65, 197, 218);
+  font-family: 'Montserrat', sans-serif;
+  width: 34%;
+  margin-left: 31%;
+  border-radius: 3%;
+  padding: 2%;
 }
 
 @keyframes App-logo-spin {
@@ -40,19 +55,14 @@ background-image: linear-gradient(-225deg, #FF057C 0%, #7C64D5 48%, #4CC3FF 100%
 }
 
 .welcome-btn{
-  font-size: 36pt;
-  width: 6em;
+  font-size: 28pt;
+  width: 6.5em;
   height: 3.5em;
   margin: .3em;
   border-radius: 5%;
   background-color: aliceblue;
-  /* background: repeating-linear-gradient(
-  90deg,
-  #ff5289,
-  #ff5289 20%,
-  #f7ef0f 20%,
-  #f7ef0f 40%
-); */
+  font-family: 'Montserrat', sans-serif;
+  
   /* display: inline-block;
     vertical-align: middle;
     -webkit-transform: perspective(1px) translateZ(0);
@@ -65,8 +75,10 @@ background-image: linear-gradient(-225deg, #FF057C 0%, #7C64D5 48%, #4CC3FF 100%
 }
 
 .welcome-btn:hover{
-  background-image:url('IMG_9267.JPG');
-  background-size: cover
+  /* background-image:url('IMG_9267.JPG');
+  background-size: cover; */
+  background-color:  #8FDEEA;
+  border-color:  rgb(110, 202, 216)
   /* display: inline-block;
     vertical-align: middle;
     -webkit-transform: perspective(1px) translateZ(0);
@@ -101,13 +113,27 @@ background-image: linear-gradient(-225deg, #FF057C 0%, #7C64D5 48%, #4CC3FF 100%
   margin-left: 2em;
   margin-top: 1em;
   margin-bottom: 1em;
-  color: aliceblue
+  color: black
 }
 
 .nav-bar{
   padding: 1em;
-  background-color: rgb(31, 156, 206);
+  /* background: repeating-linear-gradient(
+    90deg,
+    #F9B8C2,
+    #F9B8C2 5%,
+    #FFF0D6 5%,
+    #FFF0D6 10%,
+    #CDF4D6 10%,
+    #CDF4D6 15%,
+    #AEF9EF 15%,
+    #AEF9EF 20%,
+    #8FDEEA 20%,
+    #8FDEEA 25%
+  ); */
+  background-color:rgb(65, 197, 218)
 }
+/* CALENDAR START */
 
 .calendar{
   /* margin-left: 1%; */
@@ -130,6 +156,7 @@ background-image: linear-gradient(-225deg, #FF057C 0%, #7C64D5 48%, #4CC3FF 100%
   color: black;
   font-size: 14pt;
 }
+
 
 .react-calendar {
   width: 350px;
@@ -167,6 +194,13 @@ background-image: linear-gradient(-225deg, #FF057C 0%, #7C64D5 48%, #4CC3FF 100%
     background: none;
     margin-top: 1em !important;
 }
+
+.react-calendar__tile--active {
+  background: rgb(110, 202, 216) !important;
+  color: white;
+} 
+
+/* CALENDAR END */
 
 .show-entry{
   text-align: left;
@@ -237,17 +271,20 @@ tbody{
   text-align: center 
 }
 .symptoms-table-outer{
-  background-color: rgb(31, 156, 206);
+  background-color:rgb(117, 212, 227);
   width: 60%;
   margin-left: 20%;
   padding-top: .5%;
-  color: aliceblue;
+  border-radius: 2%;
+  color: black;
   font-family: 'Montserrat', sans-serif;
 }
 .symptoms-table{
   background-color: aliceblue;
   padding: 3%;
   padding-left: 15%;
+  border-bottom-left-radius: 2%;
+  border-bottom-right-radius: 2%;
   font-family: Arial, Helvetica, sans-serif;
   color: black;
   text-align: left;
@@ -260,9 +297,10 @@ tbody{
 
 .chartjs-render-monitor {
   animation: chartjs-render-animation 0.001s;
-  max-width: 88vw;
-  max-height: 85vh;
-  margin: 3%;
+  max-width: 84vw;
+  max-height: 75vh;
+  margin: 4%;
+  margin-left: 6%;
   background-color: white;
   padding: 2%;
   border-radius: 2%;
@@ -276,8 +314,8 @@ tbody{
 
 header{
   font-size: 36pt;
-  background-color: rgb(31, 156, 206);
-  color: aliceblue;
+  background-color: rgb(117, 212, 227);
+  color: black;
   /* background-image:url('IMG_9267.JPG');
   background-size: cover; */
   padding: 1.5%;
@@ -290,8 +328,7 @@ header{
   margin-top: 5%;
   margin-left: 18%;
   margin-right: 18%;
-  border: #757575;
-  border-style: double;
+  border-color: rgb(117, 212, 227);
   padding: 2%;
   border-radius: 2%;
   background-color: aliceblue
@@ -300,7 +337,7 @@ header{
 .nav-name{
   font-size: 24pt;
   font-family: 'Montserrat', sans-serif;
-  color: aliceblue;
+  color: black;
   font-weight: 500
 }
 
@@ -375,20 +412,37 @@ li{
     transition-property: transform; */
 }
 
+.schedule-form{
+  border-color: rgb(117, 212, 227);
+  width: 30%;
+  padding: 2%;
+  border-radius: 2%;
+  margin: 5%;
+  margin-left: 10%;
+  margin-right: 2%;
+  background-color: aliceblue;
+}
+
+.schedule-container{
+display: flex;
+flex-direction: row
+}
+
 /* ACCORDION START */
 .accordion {
-  background-color:rgb(31, 156, 206);
-  color: aliceblue;
+  background-color:rgb(110, 202, 216);
+  color: black;
   font-family: 'Montserrat', sans-serif;
   cursor: pointer;
   padding: 2%;
   padding-left: 5%;
   width: 70%;
+  border-radius: 2%;
   text-align: left;
   border: none;
   outline: none;
   transition: 0.4s;
-  margin-left: 10%
+  margin-left: 12%
 }
 
 .panel {
@@ -402,9 +456,9 @@ li{
 }
 /* ACCORDION STOP */
 
-.choose-date{
+/* .choose-date{
   color: aliceblue;
-}
+} */
 
 /* ANIMATIONS */
 

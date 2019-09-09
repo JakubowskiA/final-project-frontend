@@ -60,7 +60,9 @@ class Main extends Component {
                 <Route
                     path='/main/schedule'
                     render={() => (
-                        <Schedule />
+                        <Schedule 
+                        userId={this.props.userId}
+                        />
                     )}
                 />
             </Fragment>

@@ -80,9 +80,10 @@ class EntryForm extends Component{
         <div>
         <form onSubmit={(event)=>this.submitEntry(event, this.state)} className="entry-form">
         <br/>
-            <label>Stress Level: {this.state.preLevel}</label>
+            <label>What is your stress level? </label>
             <br/>
             <input type="range" min="1" max="10" step="1" onChange={this.handleChange} name="preLevel"/>
+            {this.state.preLevel}
             <br/>
                 {/* <datalist id="tickmarks">
                     <option value="1" label="1">1</option>
@@ -156,9 +157,10 @@ class EntryForm extends Component{
                 <button>10</button>
             </div> */}
             <br/>
-            <label>Updated Stress Level: {this.state.postLevel}</label>
+            <label>What is your stress level now?</label>
             <br/><br/>
             <input type="range" min="1" max="10" step="1" onChange={this.handleChange} name="postLevel"/>
+            {this.state.postLevel}
             <br/>
             <br/>
             <input type="Submit" className="btn"/>

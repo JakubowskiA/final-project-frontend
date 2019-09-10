@@ -78,23 +78,25 @@ class Schedule extends Component{
     
     render(){
        console.log('stoot', this.state);
-        let appointmentsArray = ["You have no appointments for this day."]
-        if (this.state.appointments !== []){
+        let appointmentsArray = []
+        if (this.state.appointments.length !== 0){
         appointmentsArray = this.state.appointments.map(
             appointment=>(
                 <div>
-                <h4>{appointment.name}: {moment(appointment.date).format('lll')}</h4>
+                <p>{appointment.name}: {moment(appointment.date).format('lll')}</p>
                 
                 </div>
             )
-        )}else{appointmentsArray = ["You have no appointments for this day."]}
+        )}else if(this.state.appointments.length === 0 && this.state.inputDate === ""){
+            appointmentsArray = ["Choose a day to see your schedule."]
+        }else{appointmentsArray = ["You have nothing scheduled for this day."]}
         
 
     return(
     <Fragment>
 
-        <h2 className="choose-date">Choose a date</h2>
-
+        {/* <h2 className="choose-date">Choose a date</h2> */}
+        <br/><br/>
         <Calendar 
         calendarType="US" 
         className="calendar2" 
@@ -105,21 +107,21 @@ class Schedule extends Component{
         /> 
         <div className="schedule-container">
         <div className="schedule-form">
-            <p>Schedule some self care</p>
+            <p className="schedule-header">Add something to your schedule</p>
             <form onSubmit={(event)=>this.newAppointment(event, this.state)} >
                 <label>What will you do?</label>
                 <br/>
                 <input type="text" name="inputName" onChange={this.handleChange} value={this.state.name}></input>
-                <br/>
+                <br/><br/>
                 <label>When will you do it?</label>
                 <br/>
                 <input type="datetime-local" name="inputDate" onChange={this.handleChange} value={this.state.date}></input>
-                <br/>
+                <br/><br/>
                 <input type="submit" value="Submit"/>
             </form>
         </div>
         <div className="schedule-form">
-        <p>Your schedule for this day</p>
+        <p className="schedule-header">Your schedule for this day</p>
        {appointmentsArray}
         </div>
         </div>

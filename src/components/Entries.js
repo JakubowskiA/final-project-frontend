@@ -80,7 +80,7 @@ class Entries extends Component{
     render(){
         console.log('state entries',this.state);
         let entriesArray = ["You have no entries for this day."]
-        if (this.state.userEntries !== []){
+        if (this.state.userEntries.length !== 0){
         entriesArray = this.state.userEntries.map(
             entry=>(
                 <Entry
@@ -88,14 +88,14 @@ class Entries extends Component{
                 entry={entry}
                 />
             )
-        )}else{entriesArray = ["You have no entries for this day."]}
+        )}else if(this.state.userEntries.length === 0){entriesArray = "You have no entries for this day."}
 
         
 
     return(
     <Fragment>
 
-        <h2 className="choose-date">Choose a date</h2>
+        <h2 className="choose-date style-font">Choose a date</h2>
        
         {/* CALENDAR1
         <div onClick={this.selectDay}>
@@ -116,14 +116,12 @@ class Entries extends Component{
         onChange={this.onChange}
         value={this.state.date}       
         /> 
-       
-       
-         {entriesArray}
         <br/>
+         {entriesArray}
+        <br/><br/>
        
     </Fragment>
     )}
 }
 
 export default withRouter(Entries)
-

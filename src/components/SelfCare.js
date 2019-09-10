@@ -727,7 +727,7 @@ class SelfCare extends Component {
 
                 <div className="sc-container">
                 <br/>
-                <h2>Self Care Ideas</h2>
+                <h2 className="style-font">Self Care Ideas</h2>
                 
                 <p>Choose an option to see self care ideas.</p>
                 <form>

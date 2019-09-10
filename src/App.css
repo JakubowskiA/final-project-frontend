@@ -110,9 +110,10 @@ background-image: linear-gradient(-225deg, #FF057C 0%, #7C64D5 48%, #4CC3FF 100%
 
 
 .nav-item{
-  margin-left: 2em;
+  margin-left: 1.5em;
   margin-top: 1em;
   margin-bottom: 1em;
+  font-size: 11pt;
   color: black
 }
 
@@ -131,7 +132,7 @@ background-image: linear-gradient(-225deg, #FF057C 0%, #7C64D5 48%, #4CC3FF 100%
     #8FDEEA 20%,
     #8FDEEA 25%
   ); */
-  background-color:rgb(65, 197, 218)
+  background-color:rgb(117, 212, 227)
 }
 /* CALENDAR START */
 
@@ -335,7 +336,7 @@ header{
 }
 
 .nav-name{
-  font-size: 24pt;
+  font-size: 28pt;
   font-family: 'Montserrat', sans-serif;
   color: black;
   font-weight: 500
@@ -421,11 +422,31 @@ li{
   margin-left: 10%;
   margin-right: 2%;
   background-color: aliceblue;
+  font-size: 10pt;
 }
 
 .schedule-container{
 display: flex;
 flex-direction: row
+}
+
+input[type="datetime-local" i] {
+  align-items: center;
+  display: -webkit-inline-flex;
+  font-size: 8pt;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-inline-start: 1px;
+  cursor: default;
+  overflow: hidden;
+  width: 14.5em;
+}
+
+.style-font{
+  font-family: 'Montserrat', sans-serif;
+}
+
+.schedule-header{
+  font-size: 12pt;
 }
 
 /* ACCORDION START */

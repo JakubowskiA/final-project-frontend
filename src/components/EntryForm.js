@@ -14,6 +14,7 @@ class EntryForm extends Component{
 
     }
 
+    // Controls form inputs
     handleChange = event => {
         const inputType = event.target.name
         this.setState({
@@ -21,31 +22,7 @@ class EntryForm extends Component{
         })
     }
 
-
-    // submitEntry=(event, entry)=>{
-    //     event.preventDefault()
-    //     console.log('entry',entry)
-    //     fetch('http://localhost:3000/entries',{
-    //       method: 'POST',
-    //       headers:{
-    //         "Content-Type": "application/json",
-    //         "Accept": "application/json"
-    //       },body:JSON.stringify({
-    //         entry: {
-    //           preLevel: entry.preLevel,
-    //           stressors: entry.stressors,
-    //           evaluation: entry.evaluation
-    //         }
-    //       })
-    //     })
-    //     .then(res=>res.json())
-    //     .then(data => {
-    //         console.log('Response Data', data);
-    //         this.setState({ user: data.user });
-    //         this.props.history.push('/welcome');
-    //     })
-    //   }
-
+    // Sends information to backend to add new entry to database
     submitEntry=(event, entry)=>{
         event.preventDefault()
         this.setState({submitted: true})
@@ -88,18 +65,6 @@ class EntryForm extends Component{
             <br/>
             <label>Initial Stress Level: {this.state.preLevel}</label>
             <br/>
-                {/* <datalist id="tickmarks">
-                    <option value="1" label="1">1</option>
-                    <option value="2" label="2">2</option>
-                    <option value="3" label="3"/>
-                    <option value="4" label="4"/>
-                    <option value="5" label="5"/>
-                    <option value="6" label="6"/>
-                    <option value="7" label="7"/>
-                    <option value="8" label="8"/>
-                    <option value="9" label="9"/>
-                    <option value="10" label="10"/>
-                </datalist> */}
             <br/>
             <div>
             <br/>
@@ -145,20 +110,6 @@ class EntryForm extends Component{
                 placeholder={"Write something that makes you happy. This can be a good memory, something you are looking forward to, or something good that happened today."}
                 /> 
             </div> 
-            {/* <div>
-                <label>Updated Stress Level: </label>
-                <br/>
-                <button>1</button>
-                <button>2</button>
-                <button>3</button>
-                <button>4</button>
-                <button>5</button>
-                <button>6</button>
-                <button>7</button>
-                <button>8</button>
-                <button>9</button>
-                <button>10</button>
-            </div> */}
             <br/>
             <label>What is your stress level now?</label>
             <br/>

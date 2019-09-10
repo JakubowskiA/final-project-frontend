@@ -1,8 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import allIdeas from './Data'
 
-// import SelfCareData from '../sourceData'
-
 class SelfCare extends Component {
     state={
         searchTerm:"Active",
@@ -24,14 +22,6 @@ class SelfCare extends Component {
     // }
         
     render(){
-        // OPTION 1
-            // const ideasArray = this.state.ideas.map(
-            //     idea=>(
-            //         <li>{idea.Name}</li>
-            //     )
-            // )
-        // OPTION 2
-            
             let ideas = allIdeas.filter(idea=>
                 idea.Tags.includes(this.state.searchTerm.toLowerCase()))
             
@@ -44,25 +34,12 @@ class SelfCare extends Component {
         console.log('state', this.state.searchTerm)
         return(
             <Fragment>
-                {/* <div className="sc-menu" onClick={this.filterOptions}>
-                    <button className="sc-menu-btn hvr-grow" >Active</button>
-                    <button className="sc-menu-btn hvr-grow">Charitable</button>
-                    <button className="sc-menu-btn hvr-grow">Creative</button>
-                    <button className="sc-menu-btn hvr-grow">Nourishing</button>
-                    <button className="sc-menu-btn hvr-grow">Productive</button>
-                    <button className="sc-menu-btn hvr-grow">Quick Fix</button>
-                    <button className="sc-menu-btn hvr-grow">Relaxing</button>
-                    <button className="sc-menu-btn hvr-grow">Social</button>
-                </div> */}
-
-
                 <div className="sc-container">
                 <br/>
                 <h2 className="style-font">Self Care Ideas</h2>
                 
                 <p>Choose an option to see self care ideas.</p>
                 <form>
-                    {/* <label>I want to do something </label> */}
                     <select onChange={this.filterOptions}>
                         <option value="Active">Active</option>
                         <option value="Charitable">Charitable</option>

@@ -1,7 +1,5 @@
 import React, {Component, Fragment} from 'react';
-import { Route, withRouter } from 'react-router-dom';
 import Calendar from 'react-calendar';
-import DayPicker from 'react-day-picker';
 import 'react-day-picker/lib/style.css';
 import moment from 'moment';
 
@@ -108,8 +106,7 @@ class Schedule extends Component{
             )
         )}else if(this.state.appointments.length === 0 && this.state.inputDate === ""){
             appointmentsArray = ["Choose a day to see your schedule."]
-        }else{appointmentsArray = ["You have nothing scheduled for this day."]}
-        
+        }else{appointmentsArray = ["You have nothing scheduled for this day."]}  
 
     return(
     <Fragment>

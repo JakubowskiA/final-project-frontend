@@ -1,9 +1,6 @@
 import React, {Component, Fragment} from 'react';
 import { Route, withRouter } from 'react-router-dom';
 import Calendar from 'react-calendar';
-// import Calendar from 'react-calendar/dist/entry.nostyle';
-// import ModernDatepicker from 'react-modern-datepicker';
-import DayPicker from 'react-day-picker';
 import 'react-day-picker/lib/style.css';
 
 
@@ -12,7 +9,6 @@ import Entry from './Entry'
 class Entries extends Component{
     state={
         userEntries:[],
-        // date:"",
         date: new Date(),
         dateString:"",
         prompt1:"Choose a date.",
@@ -25,33 +21,16 @@ class Entries extends Component{
     //     .then(data=>this.setState({userEntries:data}))
     // }
 
-    // selectDay=(event)=>{
-    //     console.log(event)
-    //     // this.setState({date:event})
-    //     // console.log(this.state.date)
-    //     // console.log(event.slice(4,6))
-    //     // let chosenYear=event.slice
-    //     // let chosenMonth=null
-    //     // //  SWITCH STATEMENT FOR MONTHS
-    //     // let chosenDay=event.slice
-    //     // let chosenDate=`${chosenYear}-${}-${chosenDay}`
-    //     console.log('wut',this.props);
-    // }
-
+    // When a day on the calendar is clicked, onChange gets the clicked date and gets entries made on that day
     onChange =(date)=> {
-        // console.log(date);
         let dateString = String(date)
         this.setState({dateString})
-        // console.log('Date String', dateString);
-        // this.setState({ dateString:dateString })
-        // console.log('date state str',this.state.dateString);
-        
         this.getEntry(dateString)
     }
     
+    // Gets entries made on chosen day
     getEntry=(date)=>{
         console.log('entry',date);
-        // http://localhost:3000/entries/${this.props.userId}/entry/?=entry-date=${date}
         fetch(`http://localhost:3000/entries/${this.props.userId}/entry/`, {
             method: 'GET',
             headers: {
@@ -69,16 +48,12 @@ class Entries extends Component{
             }else{
                 this.setState({prompt2: ""})
             }
-              console.log('entries',data);
-              
-            //   this.props.history.push('/welcome');
             });
     } 
     
     
     
     render(){
-        console.log('state entries',this.state);
         let entriesArray = ["You have no entries for this day."]
         if (this.state.userEntries.length !== 0){
         entriesArray = this.state.userEntries.map(
@@ -88,7 +63,8 @@ class Entries extends Component{
                 entry={entry}
                 />
             )
-        )}else if(this.state.userEntries.length === 0){entriesArray = "You have no entries for this day."}
+        )}else if(this.state.userEntries.length === 0){
+            entriesArray = "You have no entries for this day."}
 
         
 
@@ -96,18 +72,8 @@ class Entries extends Component{
     <Fragment>
 
         <h2 className="choose-date style-font">Choose a date</h2>
-       
-        {/* CALENDAR1
-        <div onClick={this.selectDay}>
-        <DayPicker 
-        className="calendar"
-        style="color:black !important"
-        onDayCreate={this.selectDay} 
-        
-        /> 
-        </div>
-        */}
-        {/* CALENDAR 2 */}
+
+        {/* CALENDAR */}
         <Calendar 
         calendarType="US" 
         className="calendar2" 

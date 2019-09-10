@@ -8,13 +8,13 @@ class Login extends Component{
     password: ""
  }
 
+ // Controls form inputs
  handleChange = event => {
     const inputType = event.target.name
     this.setState({
         [inputType]: event.target.value
     })
 }
-
 
 render() {
     return (

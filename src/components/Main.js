@@ -1,7 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import { Route, withRouter } from 'react-router-dom';
 
-import Header from './Header';
 import NavBar from './NavBar';
 
 import StressLevelTracker from './StressLevelTracker';
@@ -13,10 +12,8 @@ import Schedule from './Schedule'
 
 class Main extends Component {
     render(){
-        // console.log('user id', this.props.userId);
         return(
             <Fragment>
-                {/* <Header /> */}
                 <NavBar />
                 <Route
                     path='/main/new-entry'

@@ -1,3 +1,4 @@
+// Self care ideas data
 const allIdeas = [
             {
                 "Name": "Dance",

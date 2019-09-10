@@ -17,15 +17,13 @@ class StressLevelTracker extends Component{
     
     selectData=()=>{
         
-        console.log('i', this.state.index);
-        
-        let allData = this.state.data
-        let displayData
-        if (this.state.index>NUM_SHOWN){
-          displayData = allData.slice((this.state.index-NUM_SHOWN), this.state.index)
-        } else{
-          displayData = allData.slice(0, this.state.index)
-        }
+      let allData = this.state.data
+      let displayData
+      if (this.state.index>NUM_SHOWN){
+        displayData = allData.slice((this.state.index-NUM_SHOWN), this.state.index)
+      } else{
+        displayData = allData.slice(0, this.state.index)
+      }
       //   if (this.state.data.length>NUM_SHOWN){
       //   displayData = allData.slice((this.state.index-NUM_SHOWN), this.state.index)
       // } else{
@@ -35,55 +33,41 @@ class StressLevelTracker extends Component{
         //     allData.slice(-15)
         // } 
 
-        let creationDates = []
-        let preLevels = []
-        let postLevels = []
+      let creationDates = []
+      let preLevels = []
+      let postLevels = []
+        
+      displayData.forEach(a=>(
+        preLevels.push(Object.values(a)[1]),
+        postLevels.push(Object.values(a)[6]),
+        creationDates.push(Object.values(a)[8]),
+        this.setState({preLevels}),
+        this.setState({postLevels}),
+        this.setState({creationDates})
+      ))
 
-        
-          displayData.forEach(a=>(
-            preLevels.push(Object.values(a)[1]),
-            postLevels.push(Object.values(a)[6]),
-            creationDates.push(Object.values(a)[8]),
-            this.setState({preLevels}),
-            this.setState({postLevels}),
-            this.setState({creationDates})
-          ))
-        // preLevels.push(Object.values(object1)[1])
-        // console.log('pre',preLevels)
-        // console.log('post',postLevels)
-        // console.log('creationDates',creationDates)
-        // console.log(this.state);
-        
-
-        let formattedDates = creationDates.map(
-            date=>(
-                // moment(String(date)).format('LLL')
-                moment(String(date)).format('lll')
-            )
-        )
-        this.setState({formattedDates})
-        console.log('datesop',formattedDates)
-        
+    // Formats dates
+      let formattedDates = creationDates.map(
+          date=>(
+              moment(String(date)).format('lll')
+          )
+      )
+      this.setState({formattedDates})      
     }
 
+    // Retrieves data from earlier entries
     earlierEntries=()=>{
-      console.log('gu', NUM_SHOWN);
-      
       let currentIndexE = this.state.index
-      // if (currentIndex > NUM_SHOWN){
       this.setState({index:currentIndexE-NUM_SHOWN}, ()=>this.selectData())
-    // }
-      
     }
 
+    // Retrieves data from later entries
     laterEntries=()=>{
       let currentIndexL = this.state.index
-      // if (currentIndex < this.state.data.length){
-      this.setState({index:currentIndexL+NUM_SHOWN}, ()=>this.selectData())
-    // }
-      
+      this.setState({index:currentIndexL+NUM_SHOWN}, ()=>this.selectData())      
     }
 
+    // Retrieves user's stress level data
     componentDidMount(){
         fetch(`http://localhost:3000/users/${this.props.userId}/stress_levels`, {
             method: 'GET',
@@ -102,9 +86,6 @@ class StressLevelTracker extends Component{
     }
 
     render(){
-        // console.log('from backend',this.state.data);
-        // console.log('pres', this.state.preLevelData);
-        
         
         // let xLabels = this.state.data.forEach(mapCreatedAt)
 
@@ -130,7 +111,6 @@ class StressLevelTracker extends Component{
                 borderWidth: 1,
                 hoverBackgroundColor: 'rgba(143, 222, 234, 0.5)',
                 hoverBorderColor: 'rgb(143, 222, 234)',
-                // data: this.state.preLevels
                 data: [...this.state.preLevels]
               },
               {

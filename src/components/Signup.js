@@ -9,10 +9,12 @@ class NewUserForm extends Component {
         submitted: false
     }
 
+    // Checks if all form inputs are complete
     isStateValid = () => {
         return this.state.name && this.state.email && this.state.password
     }
 
+    // Controls form inputs
     handleChange = event => {
         const inputType = event.target.name
         this.setState({

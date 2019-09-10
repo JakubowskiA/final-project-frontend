@@ -27,18 +27,20 @@ const StressLevels=()=>{
     <Collapsible trigger="Level 3">
         <p triggerTagName="Level 3" className="panel"> 
         <ul>
-                        <li>Feeling slightly stressed</li>
-                        <li>Difficulty concentrating</li>
-                    </ul>
+            <li>Feeling slightly stressed</li>
+            <li>Difficulty concentrating</li>
+            <li>Racing thoughts</li>
+        </ul>
         </p>
     </Collapsible>
     <Collapsible trigger="Level 4">
         <p triggerTagName="Level 4" className="panel"> 
         <ul>
-                        <li>Feeling moderately stressed</li>
-                        <li>Difficulty concentrating</li>
-                        <li>Feeling overwhelmed</li>
-                    </ul>
+            <li>Feeling moderately stressed</li>
+            <li>Difficulty concentrating</li>
+            <li>Feeling overwhelmed</li>
+            <li>Racing thoughts</li>
+         </ul>
         </p>
     </Collapsible>
     <Collapsible trigger="Level 5">
@@ -235,6 +237,7 @@ const StressLevels=()=>{
                         <li>Lightheadedness</li>
                         <li>Neck or back pain</li>
                         <li>Abnormal breathing</li>
+                        <li>Sweating</li>
                     </ul>
             </div>
         </div>

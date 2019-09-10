@@ -449,6 +449,63 @@ input[type="datetime-local" i] {
   font-size: 12pt;
 }
 
+label{
+  font-size: 11pt;
+}
+
+input[type=range] {
+  /* -webkit-appearance: none; */
+  background-color: silver;
+  /* opacity: 0.0;
+  stroke-opacity: 0.0; */
+  height: 26px; 
+  border-radius: 0px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  /* -webkit-appearance: none; */
+  background-color: #808080;
+  width: 54px;
+  height: 54px;
+  /* opacity: 0.02;
+  stroke-opacity: 1.0; */
+  border-radius: 26px;
+  background-color: #F0F0F0; 
+  border: none;
+}
+
+.range-consideration[value="1"]::-webkit-slider-thumb::before { content: "1"; color: black; }
+.range-consideration[value="2"]::-webkit-slider-thumb::before { content: "2"; color: black; }
+.range-consideration[value="3"]::-webkit-slider-thumb::before { content: "3"; color: black; }
+.range-consideration[value="4"]::-webkit-slider-thumb::before { content: "4"; color: black; }
+.range-consideration[value="5"]::-webkit-slider-thumb::before { content: "5"; color: black; }
+.range-consideration[value="6"]::-webkit-slider-thumb::before { content: "6"; color: black; }
+.range-consideration[value="7"]::-webkit-slider-thumb::before { content: "7"; color: black; }
+.range-consideration[value="8"]::-webkit-slider-thumb::before { content: "8"; color: black; }
+.range-consideration[value="9"]::-webkit-slider-thumb::before { content: "9"; color: black; }
+.range-consideration[value="10"]::-webkit-slider-thumb::before { content: "10"; color: black; }
+
+.appointment-block{
+  text-align: left;
+  display: block
+}
+
+.appointment{
+  display: flex
+}
+
+.appointment button{
+  height: 2em;
+  margin-top: -.4em;
+  margin-right: 0%;
+  margin-left: 25%
+  
+}
+
+.appointment p{
+  margin: 0%
+}
+
 /* ACCORDION START */
 .accordion {
   background-color:rgb(110, 202, 216);

@@ -23,9 +23,7 @@ class Schedule extends Component{
     onChange=(date)=> {
         console.log(date);
         let dateString = String(date)
-        this.setState({inputDate:dateString}, ()=>this.getAppointment(dateString))
-        
-        
+        this.setState({inputDate:dateString}, ()=>this.getAppointment(dateString))             
     }
 
     getAppointment=(date)=>{
@@ -61,10 +59,7 @@ class Schedule extends Component{
           })
         })
         .then(res=>res.json())
-        .then(data => {
-            console.log('Response Data', data);
-            // this.setState({ appointments: data.user });
-        })
+        .then(()=>this.getAppointment(this.state.inputDate))
     }
     
     
@@ -75,16 +70,33 @@ class Schedule extends Component{
             [inputType]: event.target.value
         })
     }
+
+    deleteAppointment=(appointmentId)=>{
+        console.log(appointmentId);
+        
+        fetch(`http://localhost:3000/appointments/${this.props.userId}/${appointmentId}`, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json',
+                "Accept": "application/json",
+                'Appointment-Id':appointmentId
+            },
+        })
+        .then(res => res.json()) 
+        .then(()=>this.getAppointment(this.state.inputDate))
+    }
     
     render(){
-       console.log('stoot', this.state);
         let appointmentsArray = []
         if (this.state.appointments.length !== 0){
         appointmentsArray = this.state.appointments.map(
             appointment=>(
-                <div>
-                <p>{appointment.name}: {moment(appointment.date).format('lll')}</p>
-                
+                <div className="appointment-block">
+                <p>{appointment.name} </p>
+                <div className="appointment">
+                <p>{moment(appointment.date).format('lll')}</p>
+                <button onClick={()=>this.deleteAppointment(appointment.id)}>Delete</button>
+                </div>
                 </div>
             )
         )}else if(this.state.appointments.length === 0 && this.state.inputDate === ""){

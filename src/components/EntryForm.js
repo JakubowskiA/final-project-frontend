@@ -83,7 +83,8 @@ class EntryForm extends Component{
             <label>What is your stress level? </label>
             <br/>
             <input type="range" min="1" max="10" step="1" onChange={this.handleChange} name="preLevel"/>
-            {this.state.preLevel}
+            <br/>
+            <label>Initial Stress Level: {this.state.preLevel}</label>
             <br/>
                 {/* <datalist id="tickmarks">
                     <option value="1" label="1">1</option>
@@ -158,9 +159,10 @@ class EntryForm extends Component{
             </div> */}
             <br/>
             <label>What is your stress level now?</label>
-            <br/><br/>
+            <br/>
             <input type="range" min="1" max="10" step="1" onChange={this.handleChange} name="postLevel"/>
-            {this.state.postLevel}
+            <br/>
+            <label>Final Stress Level: {this.state.postLevel}</label>
             <br/>
             <br/>
             <input type="Submit" className="btn"/>

@@ -10,7 +10,8 @@ class Schedule extends Component{
     state={
         inputName:"",
         inputDate:"",
-        appointments:[]
+        appointments:[],
+        submitted:false
     }
 
     // componentDidMount(){
@@ -38,7 +39,11 @@ class Schedule extends Component{
             }
           })
           .then(res=>res.json())
-          .then(data=>this.setState({appointments:data}))       
+          .then(data=>
+            this.setState({appointments:data}),
+            this.setState({submitted:false}),
+            this.setState({inputName:""})
+            )       
     } 
 
     newAppointment=(event)=>{
@@ -59,7 +64,7 @@ class Schedule extends Component{
           })
         })
         .then(res=>res.json())
-        .then(()=>this.getAppointment(this.state.inputDate))
+        .then(()=>this.getAppointment(this.state.inputDate), this.setState({submitted:true}))
     }
     
     
@@ -87,6 +92,8 @@ class Schedule extends Component{
     }
     
     render(){
+        console.log('shturt',this.state);
+        
         let appointmentsArray = []
         if (this.state.appointments.length !== 0){
         appointmentsArray = this.state.appointments.map(
@@ -115,7 +122,7 @@ class Schedule extends Component{
         style="color:black !important"
         tileClassName="calendar2"
         onChange={this.onChange}
-        value={this.state.date}       
+        // value={this.state.date}       
         /> 
         <div className="schedule-container">
         <div className="schedule-form">
@@ -123,13 +130,13 @@ class Schedule extends Component{
             <form onSubmit={(event)=>this.newAppointment(event, this.state)} >
                 <label>What will you do?</label>
                 <br/>
-                <input type="text" name="inputName" onChange={this.handleChange} value={this.state.name}></input>
+                <input type="text" name="inputName" onChange={this.handleChange} value={this.state.inputName}></input>
                 <br/><br/>
                 <label>When will you do it?</label>
                 <br/>
                 <input type="datetime-local" name="inputDate" onChange={this.handleChange} value={this.state.date}></input>
                 <br/><br/>
-                <input type="submit" value="Submit"/>
+                <input type="submit" value="Submit" disabled={this.state.submitted === true || this.state.inputName ===""}/>
             </form>
         </div>
         <div className="schedule-form">

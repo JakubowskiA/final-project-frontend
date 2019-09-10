@@ -9,7 +9,8 @@ class EntryForm extends Component{
         evaluation:"",
         action: "", 
         positivity: "",
-        postLevel:null
+        postLevel:null,
+        submitted:false
 
     }
 
@@ -47,6 +48,7 @@ class EntryForm extends Component{
 
     submitEntry=(event, entry)=>{
         event.preventDefault()
+        this.setState({submitted: true})
         console.log('entry',entry)
         fetch('http://localhost:3000/entries',{
           method: 'POST',
@@ -165,7 +167,7 @@ class EntryForm extends Component{
             <label>Final Stress Level: {this.state.postLevel}</label>
             <br/>
             <br/>
-            <input type="Submit" className="btn"/>
+            <input type="Submit" className="btn" disabled={this.state.submitted === true}/>
             <br/><br/>
         </form>
         <br/><br/>

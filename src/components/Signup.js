@@ -5,7 +5,8 @@ class NewUserForm extends Component {
     state = {
         name: "",
         email: "",
-        password: ""
+        password: "",
+        submitted: false
     }
 
     isStateValid = () => {
@@ -17,6 +18,10 @@ class NewUserForm extends Component {
         this.setState({
             [inputType]: event.target.value
         })
+    }
+
+    handleClick=()=>{
+        this.setState({submitted:true})
     }
 
     render() {
@@ -37,7 +42,7 @@ class NewUserForm extends Component {
                             <Form.Input name="password" type="password" placeholder="Enter your password" onChange={this.handleChange} value={this.state.password} />
                         </Form.Field>
                         <br />
-                        <Form.Button disabled={!this.isStateValid()}>Create Account</Form.Button>
+                        <Form.Button disabled={!this.isStateValid() && this.state.submitted !== true} onClick={this.handleClick}>Create Account</Form.Button>
                     </Form>
                     
                 </div>

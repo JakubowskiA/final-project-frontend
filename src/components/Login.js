@@ -18,7 +18,7 @@ class Login extends Component{
 
 render() {
     return (
-        <div className="App">
+        <div >
             <br /><br /><br />
             <div className="login-card">
             <h1>Welcome to Serene!</h1>

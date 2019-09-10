@@ -73,7 +73,6 @@ class Entries extends Component{
 
         <h2 className="choose-date style-font">Choose a date</h2>
 
-        {/* CALENDAR */}
         <Calendar 
         calendarType="US" 
         className="calendar2" 

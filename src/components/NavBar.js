@@ -10,16 +10,16 @@ class NavBar extends React.Component {
 
   render(){
     return(
-   <nav className="nav-bar">
-     <span className="nav-name hvr-grow">Serene</span>
-       <span className="nav-item hvr-grow" onClick={_ => this.props.history.push('/main/new-entry')}>New Entry</span>
-       <span className="nav-item hvr-grow" onClick={_ => this.props.history.push("/main/entries")}>Old Entries</span>
-       <span className="nav-item hvr-grow" onClick={_ => this.props.history.push("/main/stress-level-tracker")}>Stress Tracker</span>
-       <span className="nav-item hvr-grow" onClick={_ => this.props.history.push("/main/stress-levels")}>Stress Scale</span>
-       <span className="nav-item hvr-grow" onClick={_ => this.props.history.push("/main/self-care")} >Self Care Ideas</span>
-       <span className="nav-item hvr-grow" onClick={_ => this.props.history.push("/main/schedule")} >Self Care Schedule</span>
-       <span className="nav-item hvr-grow" onClick={_ => this.props.history.push("/")} onClick={this.logout}>Logout</span>
-   </nav>
+    <nav className="nav-bar">
+        <span className="nav-name hvr-grow">Serene</span>
+        <span className="nav-item hvr-grow" onClick={_ => this.props.history.push('/main/new-entry')}>New Entry</span>
+        <span className="nav-item hvr-grow" onClick={_ => this.props.history.push("/main/entries")}>Old Entries</span>
+        <span className="nav-item hvr-grow" onClick={_ => this.props.history.push("/main/stress-level-tracker")}>Stress Tracker</span>
+        <span className="nav-item hvr-grow" onClick={_ => this.props.history.push("/main/stress-levels")}>Stress Scale</span>
+        <span className="nav-item hvr-grow" onClick={_ => this.props.history.push("/main/self-care")} >Self Care Ideas</span>
+        <span className="nav-item hvr-grow" onClick={_ => this.props.history.push("/main/schedule")} >Schedule</span>
+        <span className="nav-item hvr-grow" onClick={_ => this.props.history.push("/")} onClick={this.logout}>Logout</span>
+    </nav>
     )}
 }
 

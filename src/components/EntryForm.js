@@ -90,6 +90,7 @@ class EntryForm extends Component{
             </div>
             <br/>
             <p>Take a break for some self care. Do something just for you!</p>
+            <p>If you do not have time now, schedule something for later.</p>
             <br/>
             <div>
                 <label>What did you do for your self care?</label>

@@ -1,6 +1,5 @@
 import React, {Component, Fragment} from 'react';
 import {Bar} from 'react-chartjs-2';
-// import {pick} from 'underscore';
 import moment from 'moment';
 
 const NUM_SHOWN = 5
@@ -48,9 +47,9 @@ class StressLevelTracker extends Component{
 
     // Formats dates
       let formattedDates = creationDates.map(
-          date=>(
-              moment(String(date)).format('lll')
-          )
+        date=>(
+            moment(String(date)).format('lll')
+        )
       )
       this.setState({formattedDates})      
     }

@@ -103,7 +103,7 @@ background-image: linear-gradient(-225deg, #FF057C 0%, #7C64D5 48%, #4CC3FF 100%
 }
 
 .hvr-grow:hover,
-/* .hvr-grow:focus, */
+.hvr-grow:focus,
 .hvr-grow:active {
   transform: scale(1.1);
 }
@@ -132,12 +132,13 @@ background-image: linear-gradient(-225deg, #FF057C 0%, #7C64D5 48%, #4CC3FF 100%
     #8FDEEA 20%,
     #8FDEEA 25%
   ); */
-  background-color:rgb(117, 212, 227)
+  background-color:rgb(122, 224, 240);
+  cursor: pointer;
 }
+
 /* CALENDAR START */
 
 .calendar{
-  /* margin-left: 1%; */
   min-width: 46vw;
   min-height: 60vh;
   background-color:rgb(0, 187, 255);
@@ -149,15 +150,12 @@ background-image: linear-gradient(-225deg, #FF057C 0%, #7C64D5 48%, #4CC3FF 100%
 
 .calendar2{
   margin-left: 20%;
-  /* min-width: 5em;
-  min-height: 3em; */
   background-color:rgb(0, 187, 255);
   border-radius: 2%;
   align-content: center;
   color: black;
   font-size: 14pt;
 }
-
 
 .react-calendar {
   width: 350px;
@@ -317,10 +315,7 @@ header{
   font-size: 36pt;
   background-color: rgb(117, 212, 227);
   color: black;
-  /* background-image:url('IMG_9267.JPG');
-  background-size: cover; */
   padding: 1.5%;
-  /* font-family: 'Poiret One', cursive; */
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -350,31 +345,21 @@ header{
   padding-right: 5%;
   border-radius: 1%;
 }
+
 .sc-container-points{
   background-color: aliceblue;
   columns: 2;
   -webkit-columns: 2;
   -moz-columns: 2;
-  /* margin: 5% */
 }
 
-/* .btn{
-  background-color: rgb(31, 156, 206);
-} */
-
 .earlier-btn{
-margin-right: 60%;
-
+  margin-right: 60%;
 }
 
 .later-btn{
-  margin-right: 5%;
-  
+  margin-right: 5%;  
 }
-
-/* .btn-group{
-  margin-bottom: 10%
-} */
 
 .show-entry-input{
   font-size: 11pt;
@@ -397,20 +382,10 @@ li{
   margin: .3em;
   border-radius: 5%;
   background-color: rgb(31, 156, 206);
-
 }
 
 .sc-menu-btn:hover{
   background-color: rgb(31, 156, 206);
-  /* display: inline-block;
-    vertical-align: middle;
-    -webkit-transform: perspective(1px) translateZ(0);
-    transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    -webkit-transition-property: transform;
-    transition-property: transform; */
 }
 
 .schedule-form{
@@ -454,21 +429,15 @@ label{
 }
 
 input[type=range] {
-  /* -webkit-appearance: none; */
   background-color: silver;
-  /* opacity: 0.0;
-  stroke-opacity: 0.0; */
   height: 26px; 
   border-radius: 0px;
 }
 
 input[type="range"]::-webkit-slider-thumb {
-  /* -webkit-appearance: none; */
   background-color: #808080;
   width: 54px;
   height: 54px;
-  /* opacity: 0.02;
-  stroke-opacity: 1.0; */
   border-radius: 26px;
   background-color: #F0F0F0; 
   border: none;
@@ -499,7 +468,6 @@ input[type="range"]::-webkit-slider-thumb {
   margin-top: -.4em;
   margin-right: 0%;
   margin-left: 25%
-  
 }
 
 .appointment p{
@@ -529,14 +497,22 @@ input[type="range"]::-webkit-slider-thumb {
   color: #000;
   font-size: 11pt;
   font-family: Arial, Helvetica, sans-serif;
-  /* display: none; */
-  /* overflow: hidden; */
 }
 /* ACCORDION STOP */
 
-/* .choose-date{
-  color: aliceblue;
-} */
+/* CURSOR START */
+button{
+  cursor: pointer;
+}
+
+select{
+  cursor: pointer;
+}
+
+input[type="submit"]{
+  cursor: pointer;
+} 
+/* CURSOR END */
 
 /* ANIMATIONS */
 

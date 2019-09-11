@@ -64,13 +64,11 @@ class EntryForm extends Component{
             <input type="range" min="1" max="10" step="1" onChange={this.handleChange} name="preLevel"/>
             <br/>
             <label>Initial Stress Level: {this.state.preLevel}</label>
-            <br/>
-            <br/>
             <div>
-            <br/>
+            {/* <br/> */}
                 <div>
                     <label htmlFor="stressors">What is making you feel stressed?</label>
-                    <br/><br/>
+                    <br/>
                     <textarea id="stressors" name="stressors" 
                     onChange={this.handleChange}
                     className="input-textarea"
@@ -80,7 +78,7 @@ class EntryForm extends Component{
                 <br/>
                 <div>
                     <label>What can you do to reduce your stress?</label>
-                    <br/><br/>
+                    <br/>
                     <textarea name="evaluation" 
                     onChange={this.handleChange}
                     className="input-textarea"
@@ -89,12 +87,11 @@ class EntryForm extends Component{
                 </div>
             </div>
             <br/>
-            <p>Take a break for some self care. Do something just for you!</p>
-            <p>If you do not have time now, schedule something for later.</p>
-            <br/>
+            <p className="elevenpt">Take a break for some self care. Do something just for you!</p>
+            <p className="elevenpt">If you do not have time now, schedule something for later.</p>
             <div>
                 <label>What did you do for your self care?</label>
-                <br/><br/>
+                <br/>
                 <textarea name="action" 
                 onChange={this.handleChange}
                 className="input-textarea"
@@ -104,7 +101,7 @@ class EntryForm extends Component{
             <br/>
             <div>
                 <label>Write something that makes you happy!</label>
-                <br/><br/>
+                <br/>
                 <textarea name="positivity" 
                 onChange={this.handleChange}
                 className="input-textarea"

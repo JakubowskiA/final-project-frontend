@@ -106,9 +106,10 @@ class App extends Component {
     });
   };
 
-  customizeBackground=()=>{
-console.log('qwertyui');
-
+  customizeBackground=(event)=>{
+    // console.log(event.target)
+    // console.log(event.target.id)
+    this.setState({backgroud:event.target.id})
   }
 
   render(){

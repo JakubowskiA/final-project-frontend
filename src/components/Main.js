@@ -14,7 +14,7 @@ class Main extends Component {
     render(){
         return(
             <Fragment>
-                <NavBar />
+                <NavBar customizeBackground={this.props.customizeBackground}/>
                 <Route
                     path='/main/new-entry'
                     render={() => (

@@ -474,6 +474,32 @@ input[type="range"]::-webkit-slider-thumb {
   margin: 0%
 }
 
+.modal-content{
+  position: sticky;
+  top: 10%
+}
+
+/* STYLING OPTIONS START */
+.rainbow-btn{
+  width: 15%;
+  min-height: 10vh;
+  /* background-color: aliceblue */
+  background: repeating-linear-gradient(
+    90deg,
+    #F9B8C2,
+    #F9B8C2 5%,
+    #FFF0D6 5%,
+    #FFF0D6 10%,
+    #CDF4D6 10%,
+    #cdf4d6 15%,
+    #AEF9EF 15%,
+    #AEF9EF 20%,
+    #8fdeea 20%,
+    #8FDEEA 25%
+  );
+}
+/* STYLING OPTIONS END */
+
 /* ACCORDION START */
 .accordion {
   background-color:rgb(110, 202, 216);

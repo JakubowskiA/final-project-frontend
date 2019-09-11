@@ -65,7 +65,6 @@ class EntryForm extends Component{
             <br/>
             <label>Initial Stress Level: {this.state.preLevel}</label>
             <div>
-            {/* <br/> */}
                 <div>
                     <label htmlFor="stressors">What is making you feel stressed?</label>
                     <br/>

@@ -1,7 +1,5 @@
 import React from 'react'
 import { withRouter } from 'react-router-dom';
-import {Modal} from 'react-bootstrap';
-import { Button } from 'react-bootstrap';
 import BackgroundSelectButton from './BackgroundSelectButton'
 
 class NavBar extends React.Component {
@@ -34,8 +32,6 @@ class NavBar extends React.Component {
          test button
         </BackgroundSelectButton>
 
-
-        {/* <button onClick={() => { this.props.showModal() }}>A</button> */}
     </nav>
     )}
 }

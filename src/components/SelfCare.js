@@ -10,16 +10,6 @@ class SelfCare extends Component {
     filterOptions=(event)=>{
         this.setState({searchTerm:event.target.value})
     }
-
-    // filterOptions=(event)=>{
-    //     console.log('wre',event.target.innerText);
-        
-    //     this.setState({searchTerm:event.target.innerText})
-    //     
-    //     let filteredIdeas = allIdeas.filter(idea=>
-    //         idea.Tags.includes(this.state.searchTerm.toLowerCase()))
-    //     this.setState({ideas:filteredIdeas})
-    // }
         
     render(){
             let ideas = allIdeas.filter(idea=>

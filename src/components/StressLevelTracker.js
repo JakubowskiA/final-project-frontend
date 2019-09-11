@@ -23,14 +23,6 @@ class StressLevelTracker extends Component{
       } else{
         displayData = allData.slice(0, this.state.index)
       }
-      //   if (this.state.data.length>NUM_SHOWN){
-      //   displayData = allData.slice((this.state.index-NUM_SHOWN), this.state.index)
-      // } else{
-      //   displayData = allData
-      // }
-        // if (allData.length > 15){
-        //     allData.slice(-15)
-        // } 
 
       let creationDates = []
       let preLevels = []
@@ -86,18 +78,9 @@ class StressLevelTracker extends Component{
 
     render(){
         
-        // let xLabels = this.state.data.forEach(mapCreatedAt)
-
-        //     entry=>
-        //     entry.map(entry=>
-        //         entry.created_at)
-        //     )
-        // console.log('xla', xLabels);
         const dates = this.state.creationDates.forEach(
             date=> moment(String(date)).format('LLL')
-            // date=> moment(String(date)).format('LLL')
         )
-            // console.log('dates', dates)
 
         
         const data = {

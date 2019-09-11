@@ -20,13 +20,11 @@ class Schedule extends Component{
 
 
     onChange=(date)=> {
-        console.log(date);
         let dateString = String(date)
         this.setState({inputDate:dateString}, ()=>this.getAppointment(dateString))             
     }
 
     getAppointment=(date)=>{
-        console.log('date',date);
         fetch(`http://localhost:3000/users/${this.props.userId}/appointment`, {
             method: 'GET',
             headers: {
@@ -46,7 +44,6 @@ class Schedule extends Component{
 
     newAppointment=(event)=>{
         event.preventDefault()
-        console.log('state',this.state);
         fetch('http://localhost:3000/appointments',{
           method: 'POST',
           headers:{
@@ -75,7 +72,6 @@ class Schedule extends Component{
     }
 
     deleteAppointment=(appointmentId)=>{
-        console.log(appointmentId);
         
         fetch(`http://localhost:3000/appointments/${this.props.userId}/${appointmentId}`, {
             method: 'DELETE',
@@ -118,8 +114,7 @@ class Schedule extends Component{
         className="calendar2" 
         style="color:black !important"
         tileClassName="calendar2"
-        onChange={this.onChange}
-        // value={this.state.date}       
+        onChange={this.onChange}      
         /> 
         <div className="schedule-container">
         <div className="schedule-form">

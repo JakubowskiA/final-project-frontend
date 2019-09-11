@@ -1,9 +1,7 @@
 .App {
   text-align: center;
-  /* background-color: aliceblue; */
   min-height: 100vh;
   height: 100%;
-  /* background-color: aliceblue */
   background: repeating-linear-gradient(
     90deg,
     #F9B8C2,
@@ -17,32 +15,27 @@
     #8fdeea 20%,
     #8FDEEA 25%
   );
-
-  /* background-image:url('IMG_9267.JPG');
-  background-size: cover */
   
 }
-/* BACKGROUND CHOICES
-background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
-background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
-background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
-background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
-background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
-background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
-background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
-background-image: linear-gradient(to top, #cd9cf2 0%, #f6f3ff 100%);
-background-image: linear-gradient(-225deg, #FF057C 0%, #7C64D5 48%, #4CC3FF 100%);
-
-*/
 
 .login-card{
   background-color:  #8FDEEA;
   border-color:  rgb(65, 197, 218);
   font-family: 'Montserrat', sans-serif;
-  width: 34%;
-  margin-left: 31%;
+  width: 42%;
+  margin-left: 26.5%;
   border-radius: 3%;
   padding: 2%;
+}
+
+.login-card-inner{
+  font-size: 12pt;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.login-card-input{
+  font-size: 10pt;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 @keyframes App-logo-spin {
@@ -55,7 +48,6 @@ background-image: linear-gradient(-225deg, #FF057C 0%, #7C64D5 48%, #4CC3FF 100%
 }
 
 .normal-button{
-  /* background-color: aliceblue; */
   font-size: 10pt;
 }
 
@@ -87,7 +79,7 @@ h2{
   height: 3.5em;
   margin: .3em;
   border-radius: 5%;
-  background-color: aliceblue;
+  background-color:rgb(205, 237, 241);
   font-family: 'Montserrat', sans-serif;
   
   /* display: inline-block;
@@ -102,19 +94,8 @@ h2{
 }
 
 .welcome-btn:hover{
-  /* background-image:url('IMG_9267.JPG');
-  background-size: cover; */
   background-color:  #8FDEEA;
   border-color:  rgb(110, 202, 216)
-  /* display: inline-block;
-    vertical-align: middle;
-    -webkit-transform: perspective(1px) translateZ(0);
-    transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    -webkit-transition-property: transform;
-    transition-property: transform; */
 }
 
 
@@ -164,16 +145,6 @@ h2{
 }
 
 /* CALENDAR START */
-
-/* .calendar{
-  min-width: 46vw;
-  min-height: 60vh;
-  background-color:rgb(0, 187, 255);
-  border-radius: 2%;
-  align-content: center;
-  color: black;
-  font-size: 36pt;
-} */
 
 .calendar2{
   margin-left: 25%;
@@ -241,11 +212,11 @@ h2{
   margin-left: 15%;
   margin-right: 15%;
   margin-top: 5%;
-  border: #757575;
+  border: #c8c9ca;
   border-style: solid;
   padding: 5%;
   border-radius: 2%;
-  background-color: aliceblue
+  background-color:rgb(204, 244, 248);
 }
 
 .input-textarea{
@@ -315,7 +286,7 @@ tbody{
   font-family: 'Montserrat', sans-serif;
 }
 .symptoms-table{
-  background-color: aliceblue;
+  background-color:rgb(204, 244, 248);
   padding: 3%;
   padding-left: 15%;
   border-bottom-left-radius: 2%;
@@ -366,14 +337,14 @@ header{
 }
 
 .entry-form{
-  
   margin-top: 5%;
   margin-left: 18%;
   margin-right: 18%;
-  border-color: rgb(117, 212, 227);
+  border: #c8c9ca;
+  border-style: solid;
   padding: 2%;
   border-radius: 2%;
-  background-color: aliceblue
+  background-color:rgb(204, 244, 248);
 }
 
 .nav-name{
@@ -384,16 +355,18 @@ header{
 }
 
 .sc-container{
-  background-color: aliceblue;
+  background-color: rgb(204, 244, 248);
   margin: 10%;
   margin-top: 5%;
   padding-left: 5%;
   padding-right: 5%;
   border-radius: 1%;
+  border: #c8c9ca;
+  border-style: solid;
 }
 
 .sc-container-points{
-  background-color: aliceblue;
+  background-color: rgb(204, 244, 248);
   columns: 2;
   -webkit-columns: 2;
   -moz-columns: 2;
@@ -442,8 +415,10 @@ li{
   margin: 5%;
   margin-left: 10%;
   margin-right: 2%;
-  background-color: aliceblue;
+  background-color:rgb(204, 244, 248);
   font-size: 10pt;
+  border: #c8c9ca;
+  border-style: solid;
 }
 
 .schedule-container{
@@ -474,32 +449,6 @@ input[type="datetime-local" i] {
 label{
   font-size: 11pt;
 }
-
-input[type=range] {
-  background-color: silver;
-  height: 26px; 
-  border-radius: 0px;
-}
-
-input[type="range"]::-webkit-slider-thumb {
-  background-color: #808080;
-  width: 54px;
-  height: 54px;
-  border-radius: 26px;
-  background-color: #F0F0F0; 
-  border: none;
-}
-
-.range-consideration[value="1"]::-webkit-slider-thumb::before { content: "1"; color: black; }
-.range-consideration[value="2"]::-webkit-slider-thumb::before { content: "2"; color: black; }
-.range-consideration[value="3"]::-webkit-slider-thumb::before { content: "3"; color: black; }
-.range-consideration[value="4"]::-webkit-slider-thumb::before { content: "4"; color: black; }
-.range-consideration[value="5"]::-webkit-slider-thumb::before { content: "5"; color: black; }
-.range-consideration[value="6"]::-webkit-slider-thumb::before { content: "6"; color: black; }
-.range-consideration[value="7"]::-webkit-slider-thumb::before { content: "7"; color: black; }
-.range-consideration[value="8"]::-webkit-slider-thumb::before { content: "8"; color: black; }
-.range-consideration[value="9"]::-webkit-slider-thumb::before { content: "9"; color: black; }
-.range-consideration[value="10"]::-webkit-slider-thumb::before { content: "10"; color: black; }
 
 .appointment-block{
   text-align: left;
@@ -588,15 +537,15 @@ ul{
   background: repeating-linear-gradient(
     90deg,
     #F9B8C2,
-    #F9B8C2 5%,
-    #FFF0D6 5%,
+    #F9B8C2 10%,
     #FFF0D6 10%,
-    #CDF4D6 10%,
-    #cdf4d6 15%,
-    #AEF9EF 15%,
-    #AEF9EF 20%,
-    #8fdeea 20%,
-    #8FDEEA 25%
+    #FFF0D6 20%,
+    #CDF4D6 20%,
+    #cdf4d6 30%,
+    #AEF9EF 30%,
+    #AEF9EF 40%,
+    #8fdeea 40%,
+    #8FDEEA 50%
   );
 }
 
@@ -608,8 +557,8 @@ ul{
     90deg,
     #77d8bb,
     #77d8bb 5%,
-    #cdf4d6 5%,
-    #cdf4d6 10%,
+    #d9f5e0 5%,
+    #d9f5e0 10%,
     #8AD3C5 10%,
     #8AD3C5 15%,
     #AEF9EF 15%,
@@ -626,15 +575,15 @@ ul{
   background: repeating-linear-gradient(
     90deg,
     #77d8bb,
-    #77d8bb 5%,
-    #cdf4d6 5%,
-    #cdf4d6 10%,
-    #8AD3C5 10%,
-    #8AD3C5 15%,
-    #AEF9EF 15%,
-    #AEF9EF 20%,
-    #8fdeea 20%,
-    #8FDEEA 25%
+    #77d8bb 10%,
+    #d9f5e0 10%,
+    #d9f5e0 20%,
+    #8AD3C5 20%,
+    #8AD3C5 30%,
+    #AEF9EF 30%,
+    #AEF9EF 40%,
+    #8fdeea 40%,
+    #8FDEEA 50%
   );
 }
 
@@ -664,15 +613,15 @@ ul{
   background: repeating-linear-gradient(
     90deg,
     rgb(247, 176, 196),
-    rgb(247, 176, 196) 5%,
-    rgb(248, 213, 242) 5%,
-    rgb(248, 213, 242)10%,
-    #bdf5c8 10%,
-    #bdf5c8 15%,
+    rgb(247, 176, 196) 10%,
+    rgb(248, 213, 242) 10%,
+    rgb(248, 213, 242)20%,
+    #bdf5c8 20%,
+    #bdf5c8 30%,
     #AEF9EF 15%,
-    #AEF9EF 20%,
-    #8fdeea 20%,
-    #8FDEEA 25%
+    #AEF9EF 40%,
+    #8fdeea 40%,
+    #8FDEEA 50%
   );
 }
 
@@ -682,10 +631,10 @@ ul{
   height: 100%;
   background: repeating-linear-gradient(
     90deg,
-    rgb(124, 160, 167),
-    rgb(124, 160, 167) 5%,
-    rgb(205, 244, 220) 5%,
-    rgb(205, 244, 220) 10%,
+    rgb(147, 178, 184),
+    rgb(147, 178, 184) 5%,
+    rgb(196, 245, 214) 5%,
+    rgb(196, 245, 214) 10%,
     rgb(238, 243, 224) 10%,
     rgb(238, 243, 224)15%,
     #AEF9EF 15%,
@@ -701,16 +650,16 @@ ul{
   margin-left: 1.5em;
   background: repeating-linear-gradient(
     90deg,
-    rgb(124, 160, 167),
-    rgb(124, 160, 167) 5%,
-    rgb(205, 244, 220) 5%,
-    rgb(205, 244, 220) 10%,
-    rgb(238, 243, 224)10%,
-    rgb(238, 243, 224)15%,
-    #AEF9EF 15%,
-    #AEF9EF 20%,
-    #8fdeea 20%,
-    #8FDEEA 25%
+    rgb(147, 178, 184),
+    rgb(147, 178, 184) 10%,
+    rgb(196, 2410, 214) 10%,
+    rgb(196, 245, 214) 20%,
+    rgb(238, 243, 224)20%,
+    rgb(238, 243, 224)30%,
+    #AEF9EF 30%,
+    #AEF9EF 40%,
+    #8fdeea 40%,
+    #8FDEEA 50%
   );
 }
 
@@ -735,7 +684,7 @@ ul{
 
 .panel {
   padding: 1%;
-  background-color: aliceblue;
+  background-color:rgb(204, 244, 248);
   color: #000;
   font-size: 11pt;
   font-family: Arial, Helvetica, sans-serif;

@@ -32,21 +32,25 @@ class NewUserForm extends Component {
                     <br /><br /><br />
                 <div className="login-card">
                     <h1>Welcome to Serene!</h1>
-                    <h3>Sign Up</h3>
+                    <br/>
+                    <div className="login-card-inner">
+                    <h3 >Sign Up</h3>
                     <Form onSubmit={() => this.props.createUser(this.state)}>
                         <Form.Field>
-                            <Form.Input name="name" placeholder="Enter your name" onChange={this.handleChange} value={this.state.name} />
+                            <Form.Input name="name" className="login-card-input" placeholder="Enter your name" onChange={this.handleChange} value={this.state.name} />
                         </Form.Field>
+                        <br/>
                         <Form.Field>
-                            <Form.Input name="email" type="email" placeholder="Enter your email address" onChange={this.handleChange} value={this.state.email} />
+                            <Form.Input name="email" className="login-card-input" type="email" placeholder="Enter your email address" onChange={this.handleChange} value={this.state.email} />
                         </Form.Field>
+                        <br/>
                         <Form.Field>
-                            <Form.Input name="password" type="password" placeholder="Enter your password" onChange={this.handleChange} value={this.state.password} />
+                            <Form.Input name="password" className="login-card-input" type="password" placeholder="Enter your password" onChange={this.handleChange} value={this.state.password} />
                         </Form.Field>
                         <br />
                         <Form.Button disabled={!this.isStateValid() && this.state.submitted !== true} onClick={this.handleClick}>Create Account</Form.Button>
                     </Form>
-                    
+                    </div>
                 </div>
             </div>
         )

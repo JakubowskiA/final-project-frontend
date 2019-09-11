@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { withRouter } from 'react-router-dom';
 import {Modal} from 'react-bootstrap';
-import { Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function BackgroundSelectModal (props) {

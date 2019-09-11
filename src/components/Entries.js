@@ -70,7 +70,7 @@ class Entries extends Component{
 
     return(
     <Fragment>
-
+        <br/>
         <h2 className="choose-date style-font">Choose a date</h2>
 
         <Calendar 

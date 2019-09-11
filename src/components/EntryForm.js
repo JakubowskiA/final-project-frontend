@@ -116,7 +116,7 @@ class EntryForm extends Component{
             <label>Final Stress Level: {this.state.postLevel}</label>
             <br/>
             <br/>
-            <input type="Submit" className="btn" disabled={this.state.submitted === true}/>
+            <input type="Submit" className="normal-button" disabled={this.state.submitted === true}/>
             <br/><br/>
         </form>
         <br/><br/>

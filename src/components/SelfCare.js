@@ -27,7 +27,7 @@ class SelfCare extends Component {
             
             const ideasArray = ideas.map(
                 idea=>(
-                    <li>{idea.Name}</li>
+                    <li className="elevenpt">{idea.Name}</li>
                 )
             )
         

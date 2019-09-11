@@ -90,13 +90,13 @@ class Schedule extends Component{
     }
     
     render(){
-        console.log('shturt',this.state);
         
         let appointmentsArray = []
         if (this.state.appointments.length !== 0){
         appointmentsArray = this.state.appointments.map(
             appointment=>(
                 <div className="appointment-block">
+                    <hr></hr>
                 <p>{appointment.name} </p>
                 <div className="appointment">
                 <p>{moment(appointment.date).format('lll')}</p>

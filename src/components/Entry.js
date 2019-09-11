@@ -19,17 +19,17 @@ class Entries extends Component{
     return(
         <Fragment>
         <div className="show-entry">
-        <h4>{moment(this.props.entry.created_at).format('LLL')}</h4>
-        <h4>Initial Stress Level: {this.props.entry.pre_level}</h4>
-        <h4>What is making you feel stressed?</h4>
+        <p>{moment(this.props.entry.created_at).format('LLL')}</p>
+        <p>Initial Stress Level: {this.props.entry.pre_level}</p>
+        <p>What is making you feel stressed?</p>
         <p className="show-entry-input">{this.props.entry.stressors}</p>
-        <h4>What can you do to reduce your stress?</h4>
+        <p>What can you do to reduce your stress?</p>
         <p className="show-entry-input">{this.props.entry.evaluation}</p>
-        <h4>What did you do for your self care?</h4>
+        <p>What did you do for your self care?</p>
         <p className="show-entry-input">{this.props.entry.action}</p>
-        <h4>Write something that makes you happy!</h4>
+        <p>Write something that makes you happy!</p>
         <p className="show-entry-input">{this.props.entry.positivity}</p>
-        <h4>Final Stress Level: {this.props.entry.post_level}</h4>
+        <p>Final Stress Level: {this.props.entry.post_level}</p>
         </div>
     </Fragment> 
     )}

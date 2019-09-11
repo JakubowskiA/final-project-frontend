@@ -1,14 +1,25 @@
 import React from 'react'
 import { withRouter } from 'react-router-dom';
+import {Modal} from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
+import BackgroundSelectButton from './BackgroundSelectButton'
 
 class NavBar extends React.Component {
+  state={
+    show:false
+  }
 
   logout = () => {
     window.localStorage.removeItem('project-user-token')
     this.props.history.push("/")
   }
 
+  handleClose = () => this.setState({show: false});
+
+  handleShow = () => this.setState({show: true});
+  
   render(){
+
     return(
     <nav className="nav-bar">
         <span className="nav-name hvr-grow">Serene</span>
@@ -19,6 +30,12 @@ class NavBar extends React.Component {
         <span className="nav-item hvr-grow" onClick={_ => this.props.history.push("/main/self-care")} >Self Care Ideas</span>
         <span className="nav-item hvr-grow" onClick={_ => this.props.history.push("/main/schedule")} >Schedule</span>
         <span className="nav-item hvr-grow" onClick={_ => this.props.history.push("/")} onClick={this.logout}>Logout</span>
+        <BackgroundSelectButton variant="primary" customizeBackground={this.props.customizeBackground}>
+         test button
+        </BackgroundSelectButton>
+
+
+        {/* <button onClick={() => { this.props.showModal() }}>A</button> */}
     </nav>
     )}
 }

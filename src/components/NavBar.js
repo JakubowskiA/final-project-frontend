@@ -21,6 +21,8 @@ class NavBar extends React.Component {
     return(
     <nav className="nav-bar">
         <span className="nav-name hvr-grow">Serene</span>
+        {/* <div> */}
+          {/* <br/> */}
         <span className="nav-item hvr-grow" onClick={_ => this.props.history.push('/main/new-entry')}>New Entry</span>
         <span className="nav-item hvr-grow" onClick={_ => this.props.history.push("/main/entries")}>Old Entries</span>
         <span className="nav-item hvr-grow" onClick={_ => this.props.history.push("/main/stress-level-tracker")}>Stress Tracker</span>
@@ -31,7 +33,7 @@ class NavBar extends React.Component {
         <BackgroundSelectButton variant="primary" customizeBackground={this.props.customizeBackground}>
          test button
         </BackgroundSelectButton>
-
+        {/* </div> */}
     </nav>
     )}
 }

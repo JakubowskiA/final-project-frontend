@@ -793,6 +793,21 @@ input[type="submit"]{
     border-radius: 2%;
   }
 
+  .nav-item{
+    margin-left: .5em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: 10pt;
+    color: black
+  }
+
+  .nav-name{
+    font-size: 20pt;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    font-weight: 500;
+  }
+
 }
 
 @media(min-width:1200px){

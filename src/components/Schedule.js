@@ -96,8 +96,9 @@ class Schedule extends Component{
                 <p>{appointment.name} </p>
                 <div className="appointment">
                 <p>{moment(appointment.date).format('lll')}</p>
-                <button onClick={()=>this.deleteAppointment(appointment.id)}>Delete</button>
+                <br/>
                 </div>
+                <button onClick={()=>this.deleteAppointment(appointment.id)}>Delete</button>
                 </div>
             )
         )}else if(this.state.appointments.length === 0 && this.state.inputDate === ""){

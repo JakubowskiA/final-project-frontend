@@ -115,6 +115,8 @@ class StressLevelTracker extends Component{
             < Bar 
             data={data}
             options={{
+              responsive: true,
+              maintainAspectRatio: false,
                 scales: {
                   yAxes: [{
                     ticks: {

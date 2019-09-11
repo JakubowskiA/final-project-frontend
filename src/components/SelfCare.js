@@ -28,7 +28,7 @@ class SelfCare extends Component {
                 <br/>
                 <h2 className="style-font">Self Care Ideas</h2>
                 
-                <p>Choose an option to see self care ideas.</p>
+                <p>Choose an option to see ideas.</p>
                 <form>
                     <select onChange={this.filterOptions}>
                         <option value="Active">Active</option>

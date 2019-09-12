@@ -2,7 +2,7 @@ import React, {Component, Fragment} from 'react';
 import {Bar} from 'react-chartjs-2';
 import moment from 'moment';
 
-const NUM_SHOWN = 5
+const NUM_SHOWN = 7
 
 class StressLevelTracker extends Component{
     state={
@@ -120,11 +120,28 @@ class StressLevelTracker extends Component{
             options={{
               responsive: true,
               maintainAspectRatio: false,
+              legend: {
+                labels: {
+                    fontColor: "#000000",
+                    fontSize: 15,
+                    padding:5
+              }},
+              label:{
+                font:{
+                  size:14
+                }
+              },
                 scales: {
                   yAxes: [{
                     ticks: {
                         min: 0, // minimum value
-                        max: 10 // maximum value
+                        max: 10, // maximum value
+                        fontSize:13
+                    }
+                  }],
+                  xAxes: [{
+                    ticks: {
+                        fontSize:13
                     }
                   }]
                 }

@@ -66,6 +66,7 @@ class EntryForm extends Component{
             <label>Initial Stress Level: {this.state.preLevel}</label>
             <div>
                 <div>
+                    <br/>
                     <label htmlFor="stressors">What is making you feel stressed?</label>
                     <br/>
                     <textarea id="stressors" name="stressors" 
@@ -88,6 +89,7 @@ class EntryForm extends Component{
             <br/>
             <p className="elevenpt">Take a break for some self care. Do something just for you!</p>
             <p className="elevenpt">If you do not have time now, schedule something for later.</p>
+            <br/>
             <div>
                 <label>What did you do for your self care?</label>
                 <br/>

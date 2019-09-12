@@ -83,7 +83,9 @@ class Entries extends Component{
         value={this.state.date}       
         /> 
         <br/>
+        <div className="elevenpt">
          {entriesArray}
+        </div>
         <br/><br/>
     </Fragment>
     )}

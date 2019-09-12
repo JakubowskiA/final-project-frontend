@@ -134,7 +134,9 @@ class Schedule extends Component{
         </div>
         <div className="schedule-form">
         <p className="schedule-header">Your schedule for this day</p>
+       <div className="elevenpt">
        {appointmentsArray}
+       </div>
         </div>
         </div>
         <br/><br/>

@@ -29,6 +29,7 @@ class SelfCare extends Component {
                 <h2 className="style-font">Self Care Ideas</h2>
                 
                 <p>Choose an option to see ideas.</p>
+                <br/>
                 <form>
                     <select onChange={this.filterOptions}>
                         <option value="Active">Active</option>
@@ -41,7 +42,7 @@ class SelfCare extends Component {
                         <option value="Social">Social</option>
                     </select>
                 </form>
-                <br/>
+                <br/><br/>
                 <div className="sc-container-points">
                     <ul className="page-left">{ideasArray}</ul>
                     <br/><br/>

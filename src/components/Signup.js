@@ -35,6 +35,7 @@ class NewUserForm extends Component {
                     <br/>
                     <div className="login-card-inner">
                     <h3 >Sign Up</h3>
+                    <br/>
                     <Form onSubmit={() => this.props.createUser(this.state)}>
                         <Form.Field>
                             <Form.Input name="name" className="login-card-input" placeholder="Enter your name" onChange={this.handleChange} value={this.state.name} />

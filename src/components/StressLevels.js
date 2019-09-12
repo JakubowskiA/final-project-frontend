@@ -105,7 +105,7 @@ const StressLevels=()=>{
         </p>
     </Collapsible>
     </div>
-        <br/>
+        <br/><br/>
         <div>
             <div className="symptoms-table-outer">
                 <h3>Physical Symptoms of Stress</h3>

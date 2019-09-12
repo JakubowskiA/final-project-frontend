@@ -34,7 +34,7 @@
 }
 
 .login-card-input{
-  font-size: 10pt;
+  font-size: 12pt;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -70,14 +70,14 @@
 }
 
 h2{
-  font-size: 22pt !important
+  font-size: 26pt !important
 }
 
 .welcome-btn{
-  font-size: 26pt;
+  font-size: 40pt;
   width: 6.7em;
   height: 3.7em;
-  margin: .3em;
+  margin: .2em;
   border-style: solid;
   border-color: rgb(146, 225, 235);
   border-radius: 5%;
@@ -123,7 +123,7 @@ h2{
   margin-left: 1.3em;
   margin-top: 1em;
   margin-bottom: 1em;
-  font-size: 13pt;
+  font-size: 16pt;
   color: black
 }
 
@@ -154,7 +154,7 @@ h2{
   border-radius: 2%;
   align-content: center;
   color: black;
-  font-size: 14pt;
+  font-size: 18pt;
   min-height: 72% !important;
   padding: 2%;
 }
@@ -191,7 +191,7 @@ h2{
 
 .react-calendar__navigation button {
     /* width: 10%; */
-    font-size: 14pt;
+    font-size: 16pt;
     background: none;
     margin-top: 1em !important;
 }
@@ -226,7 +226,7 @@ h2{
 .input-textarea{
   min-width: 70%;
   min-height: 3.5em;
-  font-size: 10pt;
+  font-size: 12pt;
 }
 
 .page{
@@ -305,6 +305,25 @@ tbody{
 
 /* TABLE STYLING END */
 
+.modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0,0,0,.2);
+  border-radius: .3rem;
+  outline: 0;
+}
+
+.modal-dialog {
+  min-width: 50%;
+  min-height: 10%;
+  margin: 1.75rem auto;
+}
+
 .chartjs-render-monitor {
   /* animation: chartjs-render-animation 0.001s;
   max-width: 95vw;
@@ -330,10 +349,12 @@ tbody{
   text-align: left;
   margin: 3%;
   line-height: 1.5em;
+  padding: 0%;
+  padding-left: 10%
 }
 
 header{
-  font-size: 36pt;
+  font-size: 40pt;
   background-color:rgb(122, 224, 240);
   color: black;
   padding: 1.5%;
@@ -352,7 +373,7 @@ header{
 }
 
 .nav-name{
-  font-size: 28pt;
+  font-size: 36pt;
   font-family: 'Montserrat', sans-serif;
   color: black;
   font-weight: 500
@@ -360,13 +381,14 @@ header{
 
 .sc-container{
   background-color: rgb(204, 244, 248);
-  margin: 10%;
+  margin: 15%;
   margin-top: 5%;
   padding-left: 5%;
   padding-right: 5%;
-  border-radius: 1%;
+  border-radius: 3%;
   border: #c8c9ca;
   border-style: solid;
+  width: 70%
 }
 
 .sc-container-points{
@@ -385,11 +407,15 @@ header{
 }
 
 .show-entry-input{
-  font-size: 10pt;
+  font-size: 12pt;
+}
+
+.show-entry-question{
+  font-size: 14pt;
 }
 
 li{
-  font-size: 10pt
+  font-size: 14pt
 }
 
 .sc-menu{
@@ -433,7 +459,7 @@ flex-direction: row
 input[type="datetime-local" i] {
   align-items: center;
   display: -webkit-inline-flex;
-  font-size: 8pt;
+  font-size: 12pt;
   font-family: Arial, Helvetica, sans-serif;
   padding-inline-start: 1px;
   cursor: default;
@@ -446,12 +472,12 @@ input[type="datetime-local" i] {
 }
 
 .schedule-header{
-  font-size: 12pt;
+  font-size: 16pt;
   font-family: 'Montserrat', sans-serif;
 }
 
 label{
-  font-size: 11pt;
+  font-size: 16pt;
 }
 
 .appointment-block{
@@ -494,11 +520,13 @@ ul{
 }
 
 .background-btn{
-  height: 1.3em;
-  width: 1.3em;
+  height: 2em;
+  width: 2em;
   margin-left: 1.5em;
   border-radius: 50%;
   border-width: 1px;
+  position: relative;
+  top: .5em;
   border-color: rgb(170, 171, 172);
   border-style: solid;
   background: repeating-linear-gradient(
@@ -535,8 +563,8 @@ ul{
   );
 }
 .rainbow-btn{
-  width: 15%;
-  min-height: 10vh;
+  width: 25%;
+  min-height: 12vh;
   margin: 1%;
   margin-left: 1.5em;
   background: repeating-linear-gradient(
@@ -573,8 +601,8 @@ ul{
   );
 }
 .blue-green-btn{
-  width: 15%;
-  min-height: 10vh;
+  width: 25%;
+  min-height: 12vh;
   margin: 1%;
   margin-left: 1.5em;
   background: repeating-linear-gradient(
@@ -611,8 +639,8 @@ ul{
   );
 }
 .bgp-btn{
-  width: 15%;
-  min-height: 10vh;
+  width: 25%;
+  min-height: 12vh;
   margin: 1%;
   margin-left: 1.5em;
   background: repeating-linear-gradient(
@@ -650,8 +678,8 @@ ul{
   );
 }
 .blue-neutral-btn{
-  width: 15%;
-  min-height: 10vh;
+  width: 25%;
+  min-height: 12vh;
   margin: 1%;
   margin-left: 1.5em;
   background: repeating-linear-gradient(
@@ -702,13 +730,33 @@ button{
   cursor: pointer;
 }
 
+.react-calendar__navigation__label{
+  font-size: 16pt;
+}
+
 select{
   cursor: pointer;
-  font-size: 9pt !important;
+  font-size: 10pt !important;
+}
+
+.Collapsible{
+  font-size: 16pt
+}
+
+input[type="text" i] {
+  align-items: center;
+  display: -webkit-inline-flex;
+  font-size: 12pt;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-inline-start: 1px;
+  cursor: default;
+  overflow: hidden;
+  width: 14em;
 }
 
 .elevenpt{
-  font-size: 11pt;
+  font-size: 15pt;
+  line-height: 1.5em;
 }
 
 input[type="submit"]{
@@ -725,37 +773,14 @@ input[type="submit"]{
     border-radius: 2%;
     align-content: center;
     color: black;
-    font-size: 10pt;
-    width: 15%;
-  }
-
-  .react-calendar__navigation__label{
-    font-size: 10pt;
-  }
-
-  .react-calendar__navigation button {
     font-size: 8pt;
-    background: none;
-    padding: 0%;
-    margin-top: 1em !important;
-  }
-
-  h1{
-    font-size: 2rem;
+    width: 15%;
   }
 
   .input-textarea{
     min-width: 70%;
     min-height: 3.5em;
-    font-size: 8pt;
-  }
-
-  li{
-    font-size: 10pt
-  }
-
-  .elevenpt{
-    font-size: 10pt;
+    font-size: 8pt !important;
   }
 
   input[type="datetime-local" i] {
@@ -766,7 +791,7 @@ input[type="submit"]{
     padding-inline-start: 1px;
     cursor: default;
     overflow: hidden;
-    width: 9em;
+    width: 10em;
   }
 
    input[type="text" i] {
@@ -780,8 +805,132 @@ input[type="submit"]{
     width: 9em;
   }
 
+  .show-entry-input{
+    font-size: 8pt;
+  }
+  
+  .show-entry-question{
+    font-size: 10pt;
+  }
+
+  label{
+    font-size: 10pt;
+  }
+
+  .react-calendar {
+    width: 64vw !important;
+    min-height: 72% !important;
+    max-width: 100%;
+    background: white;
+    border: 1px solid rgb(31, 156, 206);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.125em;
+    margin-left: 18%
+  }
+
+  .react-calendar__navigation__label{
+    font-size: 8pt;
+  }
+
+  .react-calendar__navigation button {
+    font-size: 8pt;
+    background: none;
+    padding: 0%;
+    margin-top: 1em !important;
+  }
+
+  .schedule-form{
+    border-color: rgb(117, 212, 227);
+    width: 44%;
+    padding: 2%;
+    border-radius: 2%;
+    margin-top: 8%;
+    margin-left: 4%;
+    background-color:rgb(204, 244, 248);
+    font-size: 10pt;
+    border: #c8c9ca;
+    border-style: solid;
+  }
+
+  .Collapsible{
+    font-size: 12pt
+  }
+
+  h1{
+    font-size: 1rem;
+  }
+
+  h2{
+    font-size: 14pt;
+  }
+
+  .schedule-header{
+    font-size: 10pt;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .symptoms-table-outer{
+    background-color:rgb(117, 212, 227);
+    width: 70%;
+    margin-left: 15%;
+    padding-top: .5%;
+    border-radius: 2%;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16pt;
+  }
+  .symptoms-table{
+    background-color:rgb(204, 244, 248);
+    padding: 3%;
+    padding-left: 15%;
+    border-bottom-left-radius: 2%;
+    border-bottom-right-radius: 2%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    text-align: left;
+    -moz-columns:2;
+    -webkit-columns:2;
+    columns:2;
+  }
+
+  .input-textarea{
+    min-width: 70%;
+    min-height: 3.5em;
+    font-size: 12pt;
+  }
+
+  li{
+    font-size: 10pt
+  }
+
+  .elevenpt{
+    font-size: 10pt;
+  }
+
+  input[type="datetime-local" i] {
+    align-items: center;
+    display: -webkit-inline-flex;
+    font-size: 10pt;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-inline-start: 1px;
+    cursor: default;
+    overflow: hidden;
+    width: 10em;
+  }
+
+   input[type="text" i] {
+    align-items: center;
+    display: -webkit-inline-flex;
+    font-size: 10pt;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-inline-start: 1px;
+    cursor: default;
+    overflow: hidden;
+    width: 9em;
+  }
+
   .appointment p{
-    font-size: 8.5pt
+    font-size: 10pt
   }
 
   .chartjs-render-monitor {
@@ -801,22 +950,34 @@ input[type="submit"]{
     margin-left: .5em;
     margin-top: 1em;
     margin-bottom: 1em;
-    font-size: 10pt;
+    font-size: 12pt;
     color: black
   }
 
   .nav-name{
-    font-size: 20pt;
+    font-size: 22pt;
     font-family: 'Montserrat', sans-serif;
     color: black;
     font-weight: 500;
   }
 
+  .welcome-btn{
+    font-size: 18pt;
+    width: 6.5em;
+    height: 3.5em;
+    margin: 1em;
+    margin-bottom: .5em;
+    border-radius: 5%;
+    border-style: solid;
+    background-color:rgb(205, 237, 241);
+    font-family: 'Montserrat', sans-serif;
+  }
+
 }
 
-@media(min-width:1200px){
+@media(min-width:1500px){
   .welcome-btn{
-    font-size: 28pt;
+    font-size: 42pt;
     width: 6.8em;
     height: 3.5em;
     margin: 1em;
@@ -826,7 +987,56 @@ input[type="submit"]{
     background-color:rgb(205, 237, 241);
     font-family: 'Montserrat', sans-serif;
   }
+
+  header{
+    font-size: 46pt;
+  }
+
+  .nav-item{
+    margin-left: 1.75em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: 20pt;
+    color: black
+  }
+
+  .nav-name{
+    font-size: 38pt;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    font-weight: 500;
+  }
   
+}
+
+.react-calendar {
+  width: 54vw !important;
+  min-height: 80% !important;
+  max-width: 100%;
+  background: white;
+  border: 1px solid rgb(31, 156, 206);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.125em;
+}
+
+.calendar2{
+  margin-left: 23%;
+  background-color:rgb(0, 187, 255);
+  border-radius: 2%;
+  align-content: center;
+  color: black;
+  font-size: 18pt;
+  min-height: 80% !important;
+  padding: 2%;
+}
+
+.react-calendar__tile {
+  max-width: 100%;
+  text-align: center;
+  padding: 0.5em;
+  padding-bottom: .6em;
+  background: none;
+  height: 3.5em;
 }
 
 footer{

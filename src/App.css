@@ -74,12 +74,12 @@ h2{
 }
 
 .welcome-btn{
-  font-size: 28pt;
-  width: 6.5em;
-  height: 3.5em;
+  font-size: 26pt;
+  width: 6.7em;
+  height: 3.7em;
   margin: .3em;
   border-style: solid;
-  border-color: rgb(169, 236, 245);
+  border-color: rgb(146, 225, 235);
   border-radius: 5%;
   background-color:rgb(179, 238, 247);
   font-family: 'Montserrat', sans-serif;
@@ -334,7 +334,7 @@ tbody{
 
 header{
   font-size: 36pt;
-  background-color: rgb(117, 212, 227);
+  background-color:rgb(122, 224, 240);
   color: black;
   padding: 1.5%;
   font-family: 'Montserrat', sans-serif;
@@ -628,6 +628,7 @@ ul{
     #93e1ed 40%,
     #93e1ed 50%
   );
+  /* color: rgb(136, 250, 235) */
 }
 
 .blue-neutral{
@@ -826,6 +827,16 @@ input[type="submit"]{
     font-family: 'Montserrat', sans-serif;
   }
   
+}
+
+footer{
+  padding: 1em;
+  background-color:rgb(122, 224, 240);
+  cursor: pointer;
+  font-size: 10pt;
+  bottom: 0;
+  width: 100%;
+  /* position: fixed */
 }
 
 /* MEDIA QUERIES END */

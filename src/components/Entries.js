@@ -2,6 +2,7 @@ import React, {Component, Fragment} from 'react';
 import { Route, withRouter } from 'react-router-dom';
 import Calendar from 'react-calendar';
 import 'react-day-picker/lib/style.css';
+import Footer from './Footer'
 
 
 import Entry from './Entry'
@@ -84,7 +85,6 @@ class Entries extends Component{
         <br/>
          {entriesArray}
         <br/><br/>
-       
     </Fragment>
     )}
 }

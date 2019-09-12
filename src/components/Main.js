@@ -8,7 +8,7 @@ import StressLevels from './StressLevels'
 import EntryForm from './EntryForm';
 import Entries from './Entries';
 import SelfCare from './SelfCare';
-import Schedule from './Schedule'
+import Schedule from './Schedule';
 
 class Main extends Component {
     render(){
@@ -22,8 +22,9 @@ class Main extends Component {
                         userId={this.props.userId}
                         user={this.props.user}
                         />
-                    )}
+                    )}   
                 />
+                
                 <Route
                     path='/main/entries'
                     render={() => (
@@ -62,6 +63,7 @@ class Main extends Component {
                         />
                     )}
                 />
+                {/* <Footer/> */}
             </Fragment>
         )
     }

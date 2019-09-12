@@ -88,23 +88,23 @@ class StressLevelTracker extends Component{
             datasets: [
               {
                 label: 'Initial Stress Levels',
-                backgroundColor: 'rgba(121, 214, 228, 0.8)',
-                borderColor: 'rgb(121, 214, 228)',
+                backgroundColor: 'rgba(104, 200, 214, 0.8)',
+                borderColor: 'rgb(104, 200, 214)',
                 borderWidth: 1,
-                hoverBackgroundColor: 'rgba(121, 214, 228, 0.6)',
-                hoverBorderColor: 'rgb(121, 214, 228)',
+                hoverBackgroundColor: 'rgba(104, 200, 214, 0.6)',
+                hoverBorderColor: 'rgb(104, 200, 214)',
                 data: [...this.state.preLevels]
               },
               {
                 label: 'Final Stress Levels',
                 
-                backgroundColor: 'rgba(126, 241, 226, 0.8)',
-                borderColor: 'rgb(126, 241, 226)',
+                backgroundColor: 'rgba(136, 250, 235, 0.8)',
+                borderColor: 'rgb(136, 250, 235)',
                 // backgroundColor: 'rgb(159, 240, 178, 0.7)',
                 // borderColor: 'rgb(159, 240, 178)',
                 borderWidth: 1,
-                hoverBackgroundColor: 'rgb(126, 241, 226, 0.5)',
-                hoverBorderColor: 'rgb(126, 241, 226)',
+                hoverBackgroundColor: 'rgb(136, 250, 235, 0.5)',
+                hoverBorderColor: 'rgb(136, 250, 235)',
                 data: [...this.state.postLevels]
               }
             ],

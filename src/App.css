@@ -78,8 +78,10 @@ h2{
   width: 6.5em;
   height: 3.5em;
   margin: .3em;
+  border-style: solid;
+  border-color: rgb(169, 236, 245);
   border-radius: 5%;
-  background-color:rgb(205, 237, 241);
+  background-color:rgb(179, 238, 247);
   font-family: 'Montserrat', sans-serif;
   
   /* display: inline-block;
@@ -497,7 +499,8 @@ ul{
   margin-left: 1.5em;
   border-radius: 50%;
   border-width: 1px;
-  /* border-color: #000; */
+  border-color: rgb(170, 171, 172);
+  border-style: solid;
   background: repeating-linear-gradient(
     90deg,
     #F9B8C2,
@@ -525,7 +528,7 @@ ul{
     #FFF0D6 10%,
     #CDF4D6 10%,
     #cdf4d6 15%,
-    #AEF9EF 15%,
+    #aef9ef 15%,
     #AEF9EF 20%,
     #8fdeea 20%,
     #8FDEEA 25%
@@ -595,16 +598,16 @@ ul{
   height: 100%;
   background: repeating-linear-gradient(
     90deg,
-    rgb(247, 176, 196),
-    rgb(247, 176, 196) 5%,
+    rgb(247, 176, 223),
+    rgb(247, 176, 223) 5%,
     rgb(248, 213, 242) 5%,
     rgb(248, 213, 242)10%,
-    #bdf5c8 10%,
-    #bdf5c8 15%,
-    #AEF9EF 15%,
-    #AEF9EF 20%,
-    #8fdeea 20%,
-    #8FDEEA 25%
+    rgb(230, 194, 248) 10%,
+    rgb(230, 194, 248)  15%,
+    rgb(174, 244, 249) 15%,
+    rgb(174, 244, 249) 20%,
+    #93e1ed 20%,
+    #93e1ed 25%
   );
 }
 .bgp-btn{
@@ -614,16 +617,16 @@ ul{
   margin-left: 1.5em;
   background: repeating-linear-gradient(
     90deg,
-    rgb(247, 176, 196),
-    rgb(247, 176, 196) 10%,
+    rgb(247, 176, 223),
+    rgb(247, 176, 223) 10%,
     rgb(248, 213, 242) 10%,
     rgb(248, 213, 242)20%,
-    #bdf5c8 20%,
-    #bdf5c8 30%,
-    #AEF9EF 15%,
-    #AEF9EF 40%,
-    #8fdeea 40%,
-    #8FDEEA 50%
+    rgb(230, 194, 248) 20%,
+    rgb(230, 194, 248) 30%,
+    rgb(174, 244, 249) 15%,
+    rgb(174, 244, 249) 40%,
+    #93e1ed 40%,
+    #93e1ed 50%
   );
 }
 
@@ -818,6 +821,7 @@ input[type="submit"]{
     margin: 1em;
     margin-bottom: .5em;
     border-radius: 5%;
+    border-style: solid;
     background-color:rgb(205, 237, 241);
     font-family: 'Montserrat', sans-serif;
   }

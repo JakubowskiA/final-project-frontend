@@ -24,7 +24,6 @@ class App extends Component {
   }
 
   login=(user)=>{
-    // console.log('user',user);
     fetch('http://localhost:3000/login',{
       method:'POST',
       headers: { 
@@ -39,10 +38,8 @@ class App extends Component {
     .then(res=>res.json())
     .then(data=>{
       if (Object.keys(data).length > 0) {
-        // console.log('Login response Data', data);
         localStorage.setItem('project-user-token', data.token);
         this.setState({ user: data.user });
-        // console.log('user', user)
         this.props.history.push(`/welcome`);
       } else {
         alert("Invalid username or password")
@@ -107,13 +104,10 @@ class App extends Component {
   };
 
   customizeBackground=(event)=>{
-    // console.log(event.target)
-    // console.log(event.target.id)
     this.setState({backgroud:event.target.id})
   }
 
   render(){
-    // console.log('state',this.state);
     
     return (
     <div className={this.state.backgroud} >

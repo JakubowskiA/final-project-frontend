@@ -21,7 +21,6 @@ class SelfCare extends Component {
                 )
             )
         
-        console.log('state', this.state.searchTerm)
         return(
             <Fragment>
                 <div className="sc-container">
